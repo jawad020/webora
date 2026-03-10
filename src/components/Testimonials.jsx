@@ -11,7 +11,7 @@ const testimonials = [
     rating: 5,
     review:
       "Partnering with this team elevated our CRM platform's performance beyond expectations.",
-    image: "https://mernengineers.netlify.app/assets/crm-cmED4qud.png",
+    image: "https://ui-avatars.com/api/?name=Alex&background=1a3a8f&color=fff&size=200",
   },
   {
     name: "Empty Review",

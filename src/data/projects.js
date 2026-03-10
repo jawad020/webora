@@ -1,6 +1,6 @@
 import crmImage from '../assets/crm.png';
 import Architecture from '../assets/Architecture.png';
-import MernEngineers from '../assets/mern-engineers.png';
+import WeboraSite from '../assets/mern-engineers.png';
 import Koshank from '../assets/koshank.png';
 import DineshPortfolio from '../assets/dinesh-portfolio.png';
 import KoshankInvoice from '../assets/koshankInvoice.png';
@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     title: "WEBORA – Agency Website",
     tags: ["React", "Framer Motion", "Tailwind CSS"],
-    image: MernEngineers,
+    image: WeboraSite,
     link: "#",
   },
   {
