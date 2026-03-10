@@ -1,16 +1,16 @@
 
 {
-    "mainTitle": "Your Own MERN Stack Development Agency",
+    "mainTitle": "Your Web Development & SEO Agency",
     "heading": "Where Your Ideas Meet",
-    "subheading": "MERN Experts",
-    "description": "We build modern, scalable web applications using the MERN Stack — delivering custom solutions that drive growth and user engagement.",
+    "subheading": "WEBORA",
+    "description": "We build modern, scalable websites and rank your business on Google — delivering custom solutions that drive growth and organic traffic.",
     "serviceTagsDevelopment": [
-      "MERN Website Development",
-      "Responsive Website Development"
+      "Website Development",
+      "Responsive Website Design"
     ],
     "serviceTagsStrategy": [
-      "API Integration & Backend Development",
-      "SEO & Digital Strategy"
+      "SEO & Business Ranking",
+      "API Integration & Backend Development"
     ],
     "stats": [
       {

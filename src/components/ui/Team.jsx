@@ -1,43 +1,40 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import Heading from "./Heading";
-import myPhoto from "../../assets/my-photo.png";
+
 
 const teamMembers = [
   {
-    name: "Dinesh Pawar",
-    role: "MERN Stack Developer",
-    img: myPhoto,
+    name: "Team Member 1",
+    role: "Role / Position",
+    img: "https://ui-avatars.com/api/?name=Team+Member+1&background=1a3a8f&color=fff&size=400",
     social: [
-      { icon: FaLinkedin, link: "https://www.linkedin.com/in/dineshpawar07/" },
-      { icon: FaTwitter, link: "https://x.com/pawar_dine52549" },
-      { icon: FaGithub, link: "https://github.com/DineshPawar7" },
-      { icon: FaInstagram, link: "https://www.instagram.com/dineshpawar_.07/" },
+      { icon: FaLinkedin, link: "#" },
+      { icon: FaTwitter, link: "#" },
+      { icon: FaGithub, link: "#" },
+      { icon: FaInstagram, link: "#" },
     ],
   },
   {
-    name: "Shyam Payghan",
-    role: "Frontend Developer",
-    img: "https://avatars.githubusercontent.com/u/187371602?v=4",
+    name: "Team Member 2",
+    role: "Role / Position",
+    img: "https://ui-avatars.com/api/?name=Team+Member+2&background=1a3a8f&color=fff&size=400",
     social: [
-      {
-        icon: FaLinkedin,
-        link: "https://www.linkedin.com/in/shyam-payghan-b26a7b33b",
-      },
-      { icon: FaTwitter, link: "/" },
-      { icon: FaGithub, link: "https://github.com/shyampgn123" },
-      { icon: FaInstagram, link: "/" },
+      { icon: FaLinkedin, link: "#" },
+      { icon: FaTwitter, link: "#" },
+      { icon: FaGithub, link: "#" },
+      { icon: FaInstagram, link: "#" },
     ],
   },
   {
-    name: "Vaibhav Pawar",
-    role: "Frontend Developer",
-    img: "https://avatars.githubusercontent.com/u/187371602?v=4",
+    name: "Team Member 3",
+    role: "Role / Position",
+    img: "https://ui-avatars.com/api/?name=Team+Member+3&background=1a3a8f&color=fff&size=400",
     social: [
-      { icon: FaLinkedin, link: "https://www.linkedin.com/in/vaibhav-pawar08" },
-      { icon: FaTwitter, link: "/" },
-      { icon: FaGithub, link: "/" },
-      { icon: FaInstagram, link: "/" },
+      { icon: FaLinkedin, link: "#" },
+      { icon: FaTwitter, link: "#" },
+      { icon: FaGithub, link: "#" },
+      { icon: FaInstagram, link: "#" },
     ],
   },
 ];
@@ -63,7 +60,7 @@ export default function TeamSection() {
       whileInView="show"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="bg-black py-16 px-6 md:px-16 text-white"
+      className="bg-blue-900 py-16 px-6 md:px-16 text-white"
     >
       <Heading
         level={1}
@@ -107,7 +104,7 @@ export default function TeamSection() {
                           href={link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-lime-400 text-black p-2 rounded-full cursor-pointer hover:scale-110 transition"
+                          className="bg-pink-400 text-black p-2 rounded-full cursor-pointer hover:scale-110 transition"
                         >
                           <Icon size={16} />
                         </a>

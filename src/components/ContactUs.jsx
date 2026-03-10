@@ -37,7 +37,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white py-20 px-6 md:px-16">
+    <section className="min-h-screen bg-blue-900 text-white py-20 px-6 md:px-16">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export default function ContactUs() {
             />
             <button
               type="submit"
-              className="flex items-center gap-2 bg-brand text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-lime-300 transition duration-300"
+              className="flex items-center gap-2 bg-brand text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-pink-300 transition duration-300"
             >
               Send Message
               <span className="inline-block bg-black text-brand rounded-full p-2">
@@ -123,21 +123,10 @@ export default function ContactUs() {
         >
           <div className="mb-6">
             <h3 className="font-bold text-subTitle mb-2 font-roboto">
-              Address
-            </h3>
-            <p className="text-secondaryText">
-              Chhatrapati Sambhajinagar, Maharashtra, India 431116
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="font-bold text-subTitle mb-2 font-roboto">
               Contact
             </h3>
             <p className="text-secondaryText font-work">
-              Phone: +91 72640 63562
-            </p>
-            <p className="text-secondaryText font-work">
-              Email: work.mernengineers@gmail.com
+              Email: info@yourcompany.com
             </p>
           </div>
           <div className="mb-6">
@@ -153,44 +142,19 @@ export default function ContactUs() {
               Stay Connected
             </h3>
             <div className="flex gap-4 mt-2 text-lg">
-              <a
-                href="https://www.facebook.com/profile.php?id=100091281086250"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
+              <a href="#" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a
-                href="https://x.com/pawar_dine52549"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
+              <a href="#" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a
-                href="https://github.com/DineshPawar7"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Github"
-              >
+              <a href="#" aria-label="Github">
                 <FaGithubSquare />
               </a>
-              <a
-                href="https://www.instagram.com/mernengineers"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
+              <a href="#" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a
-                href="https://www.youtube.com/@DineshPawar_.07"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-              >
+              <a href="#" aria-label="YouTube">
                 <FaYoutube />
               </a>
             </div>

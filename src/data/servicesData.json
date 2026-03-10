@@ -27,6 +27,19 @@
   },
   {
     "id": 3,
+    "title": "SEO & Business Ranking",
+    "tags": [
+      "Google Search Ranking",
+      "On-Page & Off-Page SEO",
+      "Local Business SEO",
+      "Keyword Research & Strategy"
+    ],
+    "content": "Get your business and website ranking on the first page of Google. We combine technical SEO, content strategy, and link building to drive consistent organic traffic and grow your brand's online presence.",
+    "link": "/seo",
+    "image": "seo.jpg"
+  },
+  {
+    "id": 4,
     "title": "SaaS Platform Development",
     "tags": [
       "Cloud-Ready Architecture",
@@ -39,7 +52,7 @@
     "image": "saas.jpg"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Website Maintenance & Support",
     "tags": [
       "Security Monitoring",
@@ -52,7 +65,7 @@
     "image": "maintenance.jpg"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "API Development & Integration",
     "tags": [
       "RESTful or GraphQL APIs",

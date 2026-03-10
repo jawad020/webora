@@ -28,8 +28,8 @@ const About = () => {
           ) : (
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/48CNsB0aKuA?autoplay=1"
-              title="YouTube video player"
+              src="https://www.youtube.com/embed/videoseries?list=PLdummy"
+              title="About Us Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -69,10 +69,10 @@ const About = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button className="bg-brand text-black px-6 py-2 rounded-full font-semibold font-work flex items-center hover:bg-lime-300 transition">
+          <button className="bg-brand text-black px-6 py-2 rounded-full font-semibold font-work flex items-center hover:bg-pink-300 transition">
             Book a Meeting <span className="ml-2 text-xl">→</span>
           </button>
-          <span className="italic text-xl font-script">Vaibhav Pawar</span>
+          <span className="italic text-xl font-script">Your Name</span>
         </div>
       </div>
     </section>

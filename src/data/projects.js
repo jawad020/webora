@@ -25,10 +25,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "MERN Engineers – Agency Website",
+    title: "WEBORA – Agency Website",
     tags: ["React", "Framer Motion", "Tailwind CSS"],
     image: MernEngineers,
-    link: "https://mernengineers.netlify.app/",
+    link: "#",
   },
   {
     id: 4,

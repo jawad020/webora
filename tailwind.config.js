@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: '#b9fd50',
+        brand: '#ff69b4',
         bg1: 'white',
-        bg2: 'black',
+        bg2: '#1a3a8f',
         cardbg: '#f5f5f597',
         border: '#cbcbcb',
 
