@@ -1,177 +1,140 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import WeborLogo from "./ui/WeborLogo";
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaGithubSquare,
-  FaInstagram,
-  FaLinkedinIn,
+  FaFacebookF, FaTwitter, FaGithubSquare, FaInstagram, FaLinkedinIn,
 } from "react-icons/fa";
 
-const Footer = () => {
-  const footerVariants = {
-    initial: { opacity: 0, y: 50 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-  };
+const socialIcons = [
+  { icon: FaFacebookF, link: "#" },
+  { icon: FaTwitter, link: "#" },
+  { icon: FaGithubSquare, link: "#" },
+  { icon: FaInstagram, link: "#" },
+  { icon: FaLinkedinIn, link: "#" },
+];
 
-  const socialIcons = [
-    { icon: FaFacebookF, link: "#" },
-    { icon: FaTwitter, link: "#" },
-    { icon: FaGithubSquare, link: "#" },
-    { icon: FaInstagram, link: "#" },
-    { icon: FaLinkedinIn, link: "#" },
-  ];
+const footerLinks = {
+  Services: [
+    { label: "Website Development", to: "/websitedevelopment" },
+    { label: "SEO & Ranking", to: "/services" },
+    { label: "API Development", to: "/apidevelopment" },
+    { label: "MERN Stack", to: "/merndevelopment" },
+    { label: "SaaS Development", to: "/saasdevelopment" },
+  ],
+  Company: [
+    { label: "Home", to: "/" },
+    { label: "Our Team", to: "/team" },
+    { label: "Projects", to: "/projects" },
+    { label: "Contact", to: "/contact" },
+    { label: "Privacy Policy", to: "/policy" },
+  ],
+};
 
+export default function Footer() {
   return (
     <motion.footer
-      variants={footerVariants}
-      initial="initial"
-      animate="animate"
-      className="bg-blue-900 text-white py-12"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      style={{ background: "#0A0F1C" }}
+      className="border-t border-white/5 text-white"
     >
-      <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div className="space-y-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-black font-bold text-lg">
-              W
+      {/* Top gradient line */}
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#0066FF] to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+          {/* Brand col */}
+          <div className="md:col-span-2 space-y-5">
+            <WeborLogo height={36} />
+            <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+              A professional web development and SEO agency delivering high-quality digital
+              solutions for businesses of all sizes — from startups to enterprise.
+            </p>
+            <div className="flex gap-3">
+              {socialIcons.map(({ icon: Icon, link }, i) => (
+                <motion.a
+                  key={i}
+                  href={link}
+                  whileHover={{ scale: 1.15, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-9 h-9 rounded-full border border-white/10 bg-white/5
+                             flex items-center justify-center text-gray-400
+                             hover:border-[#0066FF]/60 hover:text-[#0066FF]
+                             transition-all duration-200"
+                >
+                  <Icon size={14} />
+                </motion.a>
+              ))}
             </div>
-            <h3 className="text-xl font-semibold text-brand">WEBORA</h3>
           </div>
-          <p className="text-baseText text-gray-300 font-work">
-            A professional freelance web developer, delivering high-quality
-            websites for businesses of all sizes, from startups to established
-            companies.
-          </p>
-          <div className="flex space-x-4">
-            {socialIcons.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.link}
-                className="w-9 h-9 rounded-full bg-gray-700 flex items-center justify-center text-white hover:bg-pink-400 hover:text-black transition duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <item.icon size={16} />
-              </motion.a>
-            ))}
-          </div>
+
+          {/* Link cols */}
+          {Object.entries(footerLinks).map(([title, links]) => (
+            <div key={title}>
+              <h4 className="text-white font-semibold text-sm mb-5 tracking-wide uppercase">
+                {title}
+              </h4>
+              <ul className="space-y-3">
+                {links.map(({ label, to }) => (
+                  <li key={label}>
+                    <Link
+                      to={to}
+                      className="text-gray-400 text-sm hover:text-[#00A3FF] transition-colors duration-200"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <h4 className="text-md font-semibold text-brand mb-3">
-              Navigation
-            </h4>
-            <ul className="space-y-2 text-baseText text-gray-300 font-work">
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand transition-colors">
-                  FAQs
-                </a>
-              </li>
-            </ul>
+        {/* Contact info strip */}
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-wrap gap-6 text-sm text-gray-400">
+            <a href="mailto:info@yourcompany.com"
+               className="hover:text-[#00A3FF] transition-colors duration-200">
+              info@yourcompany.com
+            </a>
+            <a href="https://yourwebsite.com"
+               className="hover:text-[#00A3FF] transition-colors duration-200">
+              yourwebsite.com
+            </a>
           </div>
-          <div>
-            <h4 className="text-baseText font-semibold text-brand mb-3">
-              Contact
-            </h4>
-            <ul className="space-y-2 text-baseText font-work text-gray-300">
-              <li>
-                <a
-                  href="yourwebsite.com"
-                  className="hover:text-brand"
-                >
-                  yourwebsite.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@yourcompany.com"
-                  className="hover:text-brand"
-                >
-                  info@yourcompany.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div className="space-y-4">
-          <h4 className="text-md font-semibold text-brand mb-3">
-            Get the latest information
-          </h4>
-          <div className="flex">
+          {/* Newsletter */}
+          <div className="flex gap-2">
             <input
               type="email"
-              placeholder="Email address"
-              className="bg-gray-700 text-white rounded-l-md py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-brand"
+              placeholder="Get latest updates"
+              className="bg-white/5 border border-white/10 text-white text-sm rounded-full
+                         py-2 px-4 focus:outline-none focus:border-[#0066FF]/60 w-48"
             />
-            <motion.button
-              className="bg-brand text-black rounded-r-md py-2 px-4 hover:bg-pink-300 transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3.42 2.5A.75.75 0 014.17 2h15.66a.75.75 0 01.75.75v18.5a.75.75 0 01-.75.75H4.17a.75.75 0 01-.75-.75V2.75zm14.28 10.32a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-3-3a.75.75 0 00-1.06 0zM5.25 12a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </motion.button>
+            <button className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] text-white text-sm
+                               font-semibold py-2 px-5 rounded-full
+                               shadow-[0_0_16px_rgba(0,102,255,0.35)]
+                               hover:shadow-[0_0_24px_rgba(0,102,255,0.5)]
+                               transition-all duration-200">
+              Subscribe
+            </button>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-gray-800 py-4 mt-10">
-        <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
-          <p>&copy; 2025 WEBORA. All Rights Reserved.</p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a href="#" className="hover:text-brand">
-              User Terms & Conditions
-            </a>
-            <span className="text-gray-600">|</span>
-            <a href="#" className="hover:text-brand">
-              Privacy Policy
-            </a>
+        {/* Bottom */}
+        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between
+                        items-center gap-3 text-xs text-gray-500">
+          <p>© 2025 WEBORA. All Rights Reserved.</p>
+          <div className="flex gap-4">
+            <Link to="/policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <span>|</span>
+            <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
     </motion.footer>
   );
-};
-
-export default Footer;
+}

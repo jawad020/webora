@@ -1,115 +1,105 @@
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { AiFillStar } from "react-icons/ai";
-import HeroMove from "./ui/HeroMove";
-import Heading from "./ui/Heading";
 
 const testimonials = [
   {
     name: "Alex",
-    role: "Owner of CRM",
+    role: "Owner of CRM Platform",
     rating: 5,
     review:
-      "Partnering with this team elevated our CRM platform's performance beyond expectations.",
-    image: "https://ui-avatars.com/api/?name=Alex&background=1a3a8f&color=fff&size=200",
+      "Partnering with Webora elevated our CRM platform's performance beyond expectations. The team delivered clean code and a stunning UI on time.",
+    image: "https://ui-avatars.com/api/?name=Alex&background=0066FF&color=fff&size=200",
   },
   {
-    name: "Empty Review",
-    role: "Empty Review",
-    rating: 0,
+    name: "Your Name Here",
+    role: "Become Our Client",
+    rating: 5,
     review:
-      "Become Our Client and Enjoy the Privilege of Sharing Your Testimonials Here",
-    image:
-      "https://i.pinimg.com/736x/c8/91/ef/c891ef6e76121c27aab6483ec7e0757a.jpg",
+      "Become our client and enjoy the privilege of sharing your testimonial here. We deliver results that speak for themselves.",
+    image: "https://ui-avatars.com/api/?name=Client&background=111827&color=0066FF&size=200",
   },
 ];
 
 export default function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
+    const t = setInterval(() => setCurrent((p) => (p + 1) % testimonials.length), 4000);
+    return () => clearInterval(t);
   }, []);
 
-  const goToPrevious = () => {
-    setCurrentTestimonial(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
+  const t = testimonials[current];
 
   return (
-    <>
-      <section className="bg-white text-black p-10 text-center font-body">
-        <Heading
-          level={1}
-          variant="hero"
-          tag="Clients Testimonials"
-          firstText="Testimonials That"
-          secondText="Make Us Proud"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="relative max-w-3xl mx-auto bg-gray-100 rounded-xl p-8 flex flex-col lg:flex-row items-center gap-6 mt-8 shadow-xl"
-        >
-          <div className="relative">
-            <img
-              src={testimonials[currentTestimonial].image}
-              alt="Client"
-              className="w-32 h-32 rounded-full"
-            />
-            <span className="absolute top-0 right-0 bg-neon w-8 h-8 flex items-center justify-center text-black text-xl rounded-full">
-              “
+    <section className="py-20 px-4 md:px-8" style={{ background: "#0A0F1C" }}>
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
+                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+            Client Testimonials
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            Testimonials That{" "}
+            <span className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent">
+              Make Us Proud
             </span>
+          </h2>
+        </div>
+
+        {/* Card */}
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="relative rounded-2xl p-8 md:p-12 border border-white/8 bg-white/3
+                     shadow-[0_8px_40px_rgba(0,102,255,0.08)]"
+        >
+          {/* Big quote mark */}
+          <span className="absolute top-6 right-8 text-[80px] leading-none text-[#0066FF]/15 font-serif select-none">
+            "
+          </span>
+
+          {/* Stars */}
+          <div className="flex gap-1 mb-6">
+            {Array(t.rating).fill(0).map((_, i) => (
+              <AiFillStar key={i} className="text-[#0066FF] text-xl" />
+            ))}
           </div>
-          <div className="text-left">
-            <div className="flex items-center gap-2 mb-2">
-              {Array(testimonials[currentTestimonial].rating)
-                .fill(0)
-                .map((_, i) => (
-                  <AiFillStar key={i} className="text-brand" />
-                ))}
-              <span className="font-semibold ml-2">
-                {testimonials[currentTestimonial].rating}.0
-              </span>
+
+          {/* Review */}
+          <p className="text-white text-lg md:text-xl leading-relaxed mb-8 max-w-3xl relative z-10">
+            "{t.review}"
+          </p>
+
+          {/* Author */}
+          <div className="flex items-center gap-4">
+            <img src={t.image} alt={t.name}
+                 className="w-12 h-12 rounded-full border-2 border-[#0066FF]/40" />
+            <div>
+              <p className="font-semibold text-white">{t.name}</p>
+              <p className="text-sm text-gray-400">{t.role}</p>
             </div>
-
-            <p className="text-sm text-gray-700 mb-4">
-              {testimonials[currentTestimonial].review}
-            </p>
-            <p className="font-bold">{testimonials[currentTestimonial].name}</p>
-            <p className="text-sm text-gray-500">
-              {testimonials[currentTestimonial].role}
-            </p>
           </div>
-
-          <button
-            onClick={goToPrevious}
-            className="absolute left-[-30px] top-1/2 -translate-y-1/2 bg-black text-white w-10 h-10 rounded-full"
-          >
-            &#8592;
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute right-[-30px] top-1/2 -translate-y-1/2 bg-neon text-black w-10 h-10 rounded-full"
-          >
-            &#8594;
-          </button>
         </motion.div>
-      </section>
 
-      <HeroMove />
-    </>
+        {/* Dots */}
+        <div className="flex justify-center gap-3 mt-8">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? "w-8 h-2 bg-[#0066FF]"
+                  : "w-2 h-2 bg-white/20 hover:bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

@@ -13,50 +13,30 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <div className='bg-black '>
-        <div className=''>
-        <Hero />
-        </div>
-
-        <div className='bg-white'>
-        <OurServices />
-        </div>
-
-        <div className='bg-black'>
+    <div style={{ background: '#0A0F1C' }}>
+      <Hero />
+      <OurServices />
+      <OurProjects />
+      <Testimonials />
+      <div style={{ background: '#111827' }}>
         <About />
-        </div>
-
-        <div className='bg-white'>
+      </div>
+      <div style={{ background: '#0A0F1C' }}>
         <WorkingProcess />
-        </div>
-
-        <div className='bg-black'>
-        <OurProjects />
-        </div>
-
-        <div className='bg-white'>
+      </div>
+      <div style={{ background: '#111827' }}>
         <TeamHighlights />
-        </div>
-
-        <div className='bg-black'>
+      </div>
+      <div style={{ background: '#0A0F1C' }}>
         <ContactUs />
-        </div>
-
-        <div className='bg-white'>
-        <Testimonials />
-        </div>
-
-        <div className='bg-black'>
+      </div>
+      <div style={{ background: '#111827' }}>
         <NewsAndBlogs />
-        </div>
-
-        <div className='bg-white'>
+      </div>
+      <div style={{ background: '#0A0F1C' }}>
         <FAQSection />
-        </div>
-        
-        <div className='bg-black'>
-        <Footer />
-        </div>
+      </div>
+      <Footer />
     </div>
   )
 }

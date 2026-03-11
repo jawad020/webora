@@ -1,127 +1,106 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import HeroMove from "./ui/HeroMove";
 import projects from "../data/projects";
-import Heading from "../components/ui/Heading";
 import { MdArrowOutward } from "react-icons/md";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.3 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 60 } },
-};
 
 export default function OurProjects() {
   const [showAll, setShowAll] = useState(false);
-  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+  const displayed = showAll ? projects : projects.slice(0, 4);
 
   return (
-    <>
-      <motion.section
-        className="text-white px-4 py-12 md:px-32"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-12"
-        >
-          <Heading
-            level={1}
-            variant="hero"
-            tag="Our Projects"
-            firstText="Our Recent"
-            secondText="Work Portfolio"
-            secondTextClassName="text-brand"
-            className="text-white"
-            tagClassname="text-textWhite"
-          />
-        </motion.div>
+    <section className="py-20 px-4 md:px-8" style={{ background: "#111827" }}>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
+                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+            Our Projects
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our Recent{" "}
+            <span className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent">
+              Work Portfolio
+            </span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+            Crafted with precision — each project tells a story of innovation and delivery.
+          </p>
+        </div>
 
+        {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           initial="hidden"
           animate="show"
+          variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.15 } } }}
         >
-          {displayedProjects.map((project, index) => (
+          {displayed.map((project) => (
             <motion.div
               key={project.id}
-              variants={itemVariants}
-              className="bg-[#111] p-4 rounded-2xl shadow-md hover:shadow-xl transition-shadow"
-              whileHover={{ scale: 1.02 }}
+              variants={{ hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0 } }}
+              className="group rounded-2xl overflow-hidden border border-white/8 bg-white/3
+                         hover:border-[#0066FF]/40 hover:shadow-[0_8px_40px_rgba(0,102,255,0.15)]
+                         hover:-translate-y-1 transition-all duration-300"
             >
-              <motion.img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-auto rounded-xl mb-4"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.2 }}
-              />
-              <div className="flex flex-wrap gap-2 mb-3">
-                {project.tags.map((tag, i) => (
-                  <motion.span
-                    key={i}
-                    className="bg-gray-800 text-textWhite font-work text-xs px-3 py-1 rounded-full"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    {tag}
-                  </motion.span>
-                ))}
+              {/* Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1C]/80 to-transparent
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <motion.div className="flex items-center justify-between mb-3">
-                <motion.h3 className="text-subTitle font-work font-medium">
-                  {project.title}
-                </motion.h3>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <motion.button
-                    whileHover={{ rotate: 90, scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="bg-brand hover:bg-lime-600 text-black p-3 rounded-full"
-                  >
-                    <MdArrowOutward />
-                  </motion.button>
-                </a>
-              </motion.div>
+
+              {/* Body */}
+              <div className="p-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, i) => (
+                    <span key={i}
+                      className="px-3 py-1 rounded-full text-xs border border-white/10 bg-white/5 text-gray-300">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title + Link */}
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold text-white">{project.title}</h3>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <motion.button
+                      whileHover={{ rotate: 45, scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] text-white
+                                 p-2.5 rounded-full shadow-[0_0_12px_rgba(0,102,255,0.4)]"
+                    >
+                      <MdArrowOutward size={16} />
+                    </motion.button>
+                  </a>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div
-          className="flex justify-center items-center flex-col mt-20 text-center"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <div></div>
+        {/* Show more */}
+        <div className="flex justify-center mt-12">
           <motion.button
             onClick={() => setShowAll(!showAll)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-brand hover:bg-lime-500 text-black font-medium px-6 py-2 rounded-full flex items-center gap-2"
+            className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] text-white
+                       font-semibold px-8 py-3 rounded-full
+                       shadow-[0_0_24px_rgba(0,102,255,0.35)]
+                       hover:shadow-[0_0_36px_rgba(0,102,255,0.55)]
+                       transition-all duration-200"
           >
-            {showAll ? "Show Less" : "View All Projects"}
-            <span className="text-2xl leading-none">+</span>
+            {showAll ? "Show Less" : "View All Projects →"}
           </motion.button>
-        </motion.div>
-      </motion.section>
-
-      <HeroMove />
-    </>
+        </div>
+      </div>
+    </section>
   );
 }
