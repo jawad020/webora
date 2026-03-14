@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Hero.css";
 import HeroMove from "../components/ui/HeroMove";
-import heroData from "../data/data.json";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <div style={{ background: "#0A0F1C" }}>
       <section className="relative overflow-hidden" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
@@ -19,25 +20,21 @@ const Hero = () => {
                              border border-[#0066FF]/30 bg-[#0066FF]/10
                              text-[#00A3FF] text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-[#00A3FF] animate-pulse" />
-              {heroData.mainTitle}
+              WEBORA Digital Agency
             </span>
           </div>
 
           {/* ── Headline ── */}
           <div className="mb-8 max-w-4xl">
-            <h1 className="font-bold leading-tight text-white"
-                style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 1.1 }}>
-              {heroData.heading}{" "}
-            </h1>
-            <h1 className="font-bold leading-tight bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent"
-                style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 1.1 }}>
-              {heroData.subheading}
+            <h1 className="font-bold leading-tight text-white mb-4"
+                style={{ fontSize: "clamp(2.8rem, 5vw, 4.5rem)", lineHeight: 1.1 }}>
+              {t("hero.headline")}
             </h1>
           </div>
 
           {/* ── Description ── */}
-          <p className="text-gray-400 text-lg max-w-2xl mb-10 leading-relaxed">
-            {heroData.description}
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+            {t("hero.description")}
           </p>
 
           {/* ── CTA Buttons ── */}
@@ -51,7 +48,7 @@ const Hero = () => {
                            hover:scale-105 active:scale-95
                            transition-all duration-200 text-base"
               >
-                Start Your Project →
+                {t("hero.startProject")}
               </button>
             </Link>
             <Link to="/projects">
@@ -60,24 +57,9 @@ const Hero = () => {
                            hover:bg-white/8 hover:border-[#0066FF]/50
                            transition-all duration-200 text-base backdrop-blur-sm"
               >
-                View Our Work
+                {t("hero.viewWork")}
               </button>
             </Link>
-          </div>
-
-          {/* ── Stats Grid ── */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {heroData.stats.map((stat, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl p-6 border border-white/8 bg-white/3
-                           hover:border-[#0066FF]/40 hover:bg-[#0066FF]/5
-                           transition-all duration-300"
-              >
-                <p className="text-3xl font-bold text-white mb-1">{stat.count}</p>
-                <p className="text-sm text-gray-400">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

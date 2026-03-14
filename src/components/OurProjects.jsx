@@ -2,8 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import projects from "../data/projects";
 import { MdArrowOutward } from "react-icons/md";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function OurProjects() {
+  const { t } = useLanguage();
   const [showAll, setShowAll] = useState(false);
   const displayed = showAll ? projects : projects.slice(0, 4);
 
@@ -14,16 +16,13 @@ export default function OurProjects() {
         <div className="text-center mb-14">
           <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
                            bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
-            Our Projects
+            WEBORA
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Recent{" "}
-            <span className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent">
-              Work Portfolio
-            </span>
+            {t("portfolio.title")}
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Crafted with precision — each project tells a story of innovation and delivery.
+            {t("portfolio.subtitle")}
           </p>
         </div>
 
@@ -97,7 +96,7 @@ export default function OurProjects() {
                        hover:shadow-[0_0_36px_rgba(0,102,255,0.55)]
                        transition-all duration-200"
           >
-            {showAll ? "Show Less" : "View All Projects →"}
+            {showAll ? t("portfolio.viewMore") : t("portfolio.viewMore")}
           </motion.button>
         </div>
       </div>

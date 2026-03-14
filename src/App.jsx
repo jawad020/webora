@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
 import Header from './components/Header';
 import Policy from './components/Policy';
@@ -16,7 +17,7 @@ import WebsiteMaintenance from './pages/ServicesDeatils/WebsiteMaintenance';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <div className="pt-[72px]">
         <Routes>
@@ -34,7 +35,7 @@ function App() {
           <Route path="/websitemaintenance" element={<WebsiteMaintenance />} />
         </Routes>
       </div>
-    </>
+    </LanguageProvider>
   );
 }
 

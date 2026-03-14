@@ -1,0 +1,304 @@
+{
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "projects": "Projets",
+      "team": "Notre Équipe",
+      "contact": "Contact",
+      "letsTalk": "Discutons",
+      "startProject": "Démarrer un projet"
+    },
+    "hero": {
+      "headline": "Nous construisons l'avenir numérique de votre entreprise",
+      "description": "WEBORA aide les entreprises à créer des sites web performants, des plateformes numériques et des stratégies marketing sur mesure pour accélérer leur croissance.",
+      "startProject": "Démarrer un projet",
+      "viewWork": "Voir nos réalisations"
+    },
+    "trust": {
+      "title": "Ils nous font confiance",
+      "subtitle": "Rejoignez les entreprises qui ont choisi WEBORA pour leur transformation digitale."
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Des solutions numériques complètes pour propulser votre entreprise.",
+      "items": {
+        "vitrine": {
+          "title": "Création de sites web vitrines professionnels",
+          "desc": "Conception de sites internet sur mesure pour présenter votre entreprise de manière élégante et professionnelle."
+        },
+        "shopify": {
+          "title": "Développement de sites e-commerce Shopify",
+          "desc": "Création de boutiques en ligne performantes et optimisées pour maximiser vos ventes."
+        },
+        "webapp": {
+          "title": "Création de web applications sur mesure",
+          "desc": "Développement d'applications web complexes adaptées à vos besoins métiers spécifiques."
+        },
+        "ai": {
+          "title": "Intégration de l'intelligence artificielle",
+          "desc": "Intégration de solutions IA modernes dans vos plateformes pour automatiser et améliorer l'expérience."
+        },
+        "logo": {
+          "title": "Création de logo professionnel",
+          "desc": "Design de logos uniques et mémorables qui reflètent l'identité de votre marque."
+        },
+        "flyer": {
+          "title": "Design de flyers et supports de communication",
+          "desc": "Création de supports graphiques percutants pour vos campagnes de communication terrestres et digitales."
+        },
+        "branding": {
+          "title": "Développement et gestion de l'image de marque",
+          "desc": "Stratégie complète pour construire une image de marque forte, cohérente et reconnaissable."
+        },
+        "marketing": {
+          "title": "Stratégie de communication et marketing digital",
+          "desc": "Élaboration de campagnes ciblées pour accroître votre visibilité et engager votre audience."
+        },
+        "seo": {
+          "title": "Optimisation SEO pour apparaître sur Google",
+          "desc": "Amélioration de votre référencement naturel pour attirer plus de trafic qualifié sur votre site."
+        }
+      }
+    },
+    "process": {
+      "title": "Notre Processus",
+      "subtitle": "Une méthode claire et structurée pour garantir la réussite de votre projet.",
+      "steps": {
+        "1": {
+          "title": "Découverte du projet",
+          "desc": "Nous analysons vos besoins, vos objectifs et votre marché pour définir la meilleure stratégie."
+        },
+        "2": {
+          "title": "Design et planification",
+          "desc": "Création de maquettes, parcours utilisateur (UX/UI) et architecture technique."
+        },
+        "3": {
+          "title": "Développement et intégration",
+          "desc": "Programmation rigoureuse et intégration des fonctionnalités avec les meilleures technologies."
+        },
+        "4": {
+          "title": "Lancement et optimisation",
+          "desc": "Tests complets, mise en ligne et suivi des performances pour des résultats optimaux."
+        }
+      }
+    },
+    "portfolio": {
+      "title": "Nos Projets",
+      "subtitle": "Découvrez nos réalisations et notre expertise technique.",
+      "viewMore": "Voir les détails"
+    },
+    "valueProp": {
+      "title": "Pourquoi choisir WEBORA ?",
+      "subtitle": "Notre engagement : excellence, fiabilité et accompagnement sur le long terme.",
+      "cards": {
+        "pro": {
+          "title": "Professionnalisme",
+          "desc": "Une équipe d'experts dédiés à la réussite de votre projet numérique avec des standards élevés."
+        },
+        "quality": {
+          "title": "Qualité Supérieure",
+          "desc": "Des designs premium, un code propre et des performances optimisées pour chaque projet."
+        },
+        "reliable": {
+          "title": "Fiabilité & Sécurité",
+          "desc": "Des infrastructures robustes et sécurisées sur lesquelles vous pouvez compter 24/7."
+        },
+        "support": {
+          "title": "Support Long Terme",
+          "desc": "Nous restons à vos côtés après le lancement pour faire évoluer votre plateforme."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Témoignages Clients",
+      "subtitle": "Ce qu'ils disent de notre collaboration."
+    },
+    "stats": {
+      "projects": "Projets Livrés",
+      "clients": "Clients Satisfaits",
+      "experience": "Années d'Expertise",
+      "services": "Services Experts"
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir avant de commencer."
+    },
+    "cta": {
+      "title": "Prêt à transformer votre vision en réalité ?",
+      "subtitle": "Rejoignez les entreprises qui font confiance à WEBORA pour leur stratégie digitale. Démarrons ensemble votre prochain grand projet.",
+      "primaryBtn": "Démarrer mon projet",
+      "secondaryBtn": "Contactez-nous"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Écrivez-nous, nous vous répondrons dans les plus brefs délais.",
+      "form": {
+        "name": "Nom complet",
+        "email": "Adresse E-mail",
+        "company": "Entreprise (Optionnel)",
+        "message": "Votre Message",
+        "submit": "Envoyer le message",
+        "success": "Message envoyé avec succès !",
+        "error": "Une erreur est survenue."
+      }
+    },
+    "footer": {
+      "description": "Agence digitale accompagnant les entreprises ambitieuses dans leur transformation technologique et stratégique.",
+      "quickLinks": "Liens Rapides",
+      "contactInfo": "Informations de Contact",
+      "rights": "Tous droits réservés."
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "projects": "Projects",
+      "team": "Our Team",
+      "contact": "Contact",
+      "letsTalk": "Let's Talk",
+      "startProject": "Start a Project"
+    },
+    "hero": {
+      "headline": "We Build Your Company's Digital Future",
+      "description": "WEBORA helps businesses build high-performance websites, digital platforms, and tailored marketing strategies to accelerate growth.",
+      "startProject": "Start a Project",
+      "viewWork": "View Our Work"
+    },
+    "trust": {
+      "title": "Trusted By",
+      "subtitle": "Join the companies that chose WEBORA for their digital transformation."
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive digital solutions to propel your business forward.",
+      "items": {
+        "vitrine": {
+          "title": "Professional Showcase Websites",
+          "desc": "Custom-designed websites to present your business elegantly and professionally."
+        },
+        "shopify": {
+          "title": "Shopify E-commerce Development",
+          "desc": "Creation of high-performing, optimized online stores to maximize your sales."
+        },
+        "webapp": {
+          "title": "Custom Web Applications",
+          "desc": "Development of complex web applications tailored to your specific business needs."
+        },
+        "ai": {
+          "title": "Artificial Intelligence Integration",
+          "desc": "Integration of modern AI solutions into your platforms to automate and enhance experiences."
+        },
+        "logo": {
+          "title": "Professional Logo Design",
+          "desc": "Design of unique and memorable logos that reflect your brand identity."
+        },
+        "flyer": {
+          "title": "Flyers & Communication Design",
+          "desc": "Creation of impactful graphic materials for your offline and online communication campaigns."
+        },
+        "branding": {
+          "title": "Brand Identity Management",
+          "desc": "Comprehensive strategy to build a strong, consistent, and recognizable brand image."
+        },
+        "marketing": {
+          "title": "Digital Marketing Strategy",
+          "desc": "Development of targeted campaigns to increase your visibility and engage your audience."
+        },
+        "seo": {
+          "title": "Google SEO Optimization",
+          "desc": "Enhancement of your search rankings to attract more qualified traffic to your website."
+        }
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "subtitle": "A clear, structured method to guarantee project success.",
+      "steps": {
+        "1": {
+          "title": "Project Discovery",
+          "desc": "We analyze your needs, goals, and market to define the best strategy."
+        },
+        "2": {
+          "title": "Design & Planning",
+          "desc": "Creation of wireframes, user journeys (UX/UI), and technical architecture."
+        },
+        "3": {
+          "title": "Development & Implementation",
+          "desc": "Rigorous programming and integration of features using the best technologies."
+        },
+        "4": {
+          "title": "Launch & Optimization",
+          "desc": "Comprehensive testing, deployment, and performance tracking for optimal results."
+        }
+      }
+    },
+    "portfolio": {
+      "title": "Our Projects",
+      "subtitle": "Discover our work and technical expertise.",
+      "viewMore": "View Details"
+    },
+    "valueProp": {
+      "title": "Why Choose WEBORA?",
+      "subtitle": "Our commitment: excellence, reliability, and long-term support.",
+      "cards": {
+        "pro": {
+          "title": "Professionalism",
+          "desc": "A dedicated team of experts ensuring high standards for your digital success."
+        },
+        "quality": {
+          "title": "Premium Quality",
+          "desc": "High-end designs, clean code, and optimized performance for every project."
+        },
+        "reliable": {
+          "title": "Reliability & Security",
+          "desc": "Robust, secure infrastructures you can rely on 24/7."
+        },
+        "support": {
+          "title": "Long-Term Support",
+          "desc": "We stand by your side post-launch to continually evolve your platform."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "What they say about working with us."
+    },
+    "stats": {
+      "projects": "Projects Delivered",
+      "clients": "Satisfied Clients",
+      "experience": "Years of Experience",
+      "services": "Expert Services"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before getting started."
+    },
+    "cta": {
+      "title": "Ready to turn your vision into reality?",
+      "subtitle": "Join the companies trusting WEBORA with their digital strategy. Let's start your next big project.",
+      "primaryBtn": "Start My Project",
+      "secondaryBtn": "Contact Us"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Drop us a message and we'll reply as soon as possible.",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "company": "Company (Optional)",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "success": "Message sent successfully!",
+        "error": "An error occurred."
+      }
+    },
+    "footer": {
+      "description": "Digital agency guiding ambitious companies through their technological and strategic transformation.",
+      "quickLinks": "Quick Links",
+      "contactInfo": "Contact Information",
+      "rights": "All rights reserved."
+    }
+  }
+}

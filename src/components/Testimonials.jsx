@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiFillStar } from "react-icons/ai";
+import { useLanguage } from "../context/LanguageContext";
 
 const testimonials = [
   {
@@ -22,6 +23,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -29,7 +31,7 @@ export default function Testimonials() {
     return () => clearInterval(t);
   }, []);
 
-  const t = testimonials[current];
+  const activeTestimonial = testimonials[current];
 
   return (
     <section className="py-20 px-4 md:px-8" style={{ background: "#0A0F1C" }}>
@@ -38,14 +40,14 @@ export default function Testimonials() {
         <div className="text-center mb-14">
           <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
                            bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
-            Client Testimonials
+            WEBORA Agency
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Testimonials That{" "}
-            <span className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent">
-              Make Us Proud
-            </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            {t("testimonials.title")}
           </h2>
+          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+            {t("testimonials.subtitle")}
+          </p>
         </div>
 
         {/* Card */}
@@ -64,23 +66,23 @@ export default function Testimonials() {
 
           {/* Stars */}
           <div className="flex gap-1 mb-6">
-            {Array(t.rating).fill(0).map((_, i) => (
+            {Array(activeTestimonial.rating).fill(0).map((_, i) => (
               <AiFillStar key={i} className="text-[#0066FF] text-xl" />
             ))}
           </div>
 
           {/* Review */}
           <p className="text-white text-lg md:text-xl leading-relaxed mb-8 max-w-3xl relative z-10">
-            "{t.review}"
+            "{activeTestimonial.review}"
           </p>
 
           {/* Author */}
           <div className="flex items-center gap-4">
-            <img src={t.image} alt={t.name}
+            <img src={activeTestimonial.image} alt={activeTestimonial.name}
                  className="w-12 h-12 rounded-full border-2 border-[#0066FF]/40" />
             <div>
-              <p className="font-semibold text-white">{t.name}</p>
-              <p className="text-sm text-gray-400">{t.role}</p>
+              <p className="font-semibold text-white">{activeTestimonial.name}</p>
+              <p className="text-sm text-gray-400">{activeTestimonial.role}</p>
             </div>
           </div>
         </motion.div>
