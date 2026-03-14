@@ -2,16 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import WeborLogo from "./ui/WeborLogo";
-import {
-  FaFacebookF, FaTwitter, FaGithubSquare, FaInstagram, FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const socialIcons = [
-  { icon: FaFacebookF, link: "#" },
-  { icon: FaTwitter, link: "#" },
-  { icon: FaGithubSquare, link: "#" },
-  { icon: FaInstagram, link: "#" },
-  { icon: FaLinkedinIn, link: "#" },
+  { icon: FaWhatsapp, link: "https://wa.me/33755769741" },
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/contact.webora?igsh=MXB6eW1rZ3dldTMxZw%3D%3D&utm_source=qr",
+  },
+  {
+    icon: FaLinkedinIn,
+    link: "https://www.linkedin.com/in/entreprise-webora-1b63773b7?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+  },
 ];
 
 const footerLinks = {
@@ -58,6 +60,8 @@ export default function Footer() {
                 <motion.a
                   key={i}
                   href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.15, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-9 h-9 rounded-full border border-white/10 bg-white/5
@@ -96,13 +100,16 @@ export default function Footer() {
         {/* Contact info strip */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-wrap gap-6 text-sm text-gray-400">
-            <a href="mailto:info@yourcompany.com"
+            <a href="mailto:contact.weboraa@gmail.com"
                className="hover:text-[#00A3FF] transition-colors duration-200">
-              info@yourcompany.com
+              contact.weboraa@gmail.com
             </a>
-            <a href="https://yourwebsite.com"
+            <a
+               href="https://wa.me/33755769741"
+               target="_blank"
+               rel="noopener noreferrer"
                className="hover:text-[#00A3FF] transition-colors duration-200">
-              yourwebsite.com
+              +33 7 55 76 97 41
             </a>
           </div>
 

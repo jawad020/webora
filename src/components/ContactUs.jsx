@@ -1,13 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaGithubSquare,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Heading from "./ui/Heading";
 
@@ -126,7 +120,10 @@ export default function ContactUs() {
               Contact
             </h3>
             <p className="text-secondaryText font-work">
-              Email: info@yourcompany.com
+              Email: contact.weboraa@gmail.com
+            </p>
+            <p className="text-secondaryText font-work mt-1">
+              WhatsApp: +33 7 55 76 97 41
             </p>
           </div>
           <div className="mb-6">
@@ -141,21 +138,30 @@ export default function ContactUs() {
             <h3 className="font-bold text-subTitle mb-2 font-roboto">
               Stay Connected
             </h3>
-            <div className="flex gap-4 mt-2 text-lg">
-              <a href="#" aria-label="Facebook">
-                <FaFacebookF />
+            <div className="flex gap-4 mt-2 text-xl">
+              <a
+                href="https://wa.me/33755769741"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
               </a>
-              <a href="#" aria-label="Twitter">
-                <FaTwitter />
-              </a>
-              <a href="#" aria-label="Github">
-                <FaGithubSquare />
-              </a>
-              <a href="#" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/contact.webora?igsh=MXB6eW1rZ3dldTMxZw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" aria-label="YouTube">
-                <FaYoutube />
+              <a
+                href="https://www.linkedin.com/in/entreprise-webora-1b63773b7?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
               </a>
             </div>
           </div>
