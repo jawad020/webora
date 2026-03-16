@@ -7,7 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 const Hero = () => {
   const { t } = useLanguage();
   return (
-    <div style={{ background: "#0A0F1C" }}>
+    <div style={{ background: "#0A0F1C" }} className="overflow-hidden">
       <section className="relative overflow-hidden" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
         {/* Gradient glow blobs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0066FF] opacity-10 rounded-full blur-[120px] pointer-events-none" />

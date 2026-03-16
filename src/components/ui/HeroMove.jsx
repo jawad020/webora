@@ -3,12 +3,15 @@ import { GiSevenPointedStar } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 const services = [
-  "Web Development",
-  "SaaS Development",
-  "Website Maintenance",
-  "UI/UX Design",
-  "API Integration",
-  "Performance Optimization",
+  "Création de sites web vitrines",
+  "Développement Shopify",
+  "Web applications sur mesure",
+  "Intégration IA",
+  "Création de logo",
+  "Design de flyers",
+  "Branding",
+  "Marketing digital",
+  "SEO Google",
 ];
 
 const HeroMove = () => {
@@ -25,7 +28,7 @@ const HeroMove = () => {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
-            duration: 20,
+            duration: 30,
             ease: "linear",
           }}
         >
@@ -34,12 +37,12 @@ const HeroMove = () => {
               {services.map((service, index) => (
                 <div
                   key={`${repeatIndex}-${index}`}
-                  className="flex items-center px-6 gap-12"
+                  className="flex items-center px-3 gap-6 md:px-6 md:gap-12"
                 >
                   <span className="text-black">
-                    <GiSevenPointedStar className="text-black text-[25px]" />
+                    <GiSevenPointedStar className="text-black text-[18px] md:text-[25px]" />
                   </span>
-                  <span className="text-black font-semibold text-[22px]">
+                  <span className="text-black font-semibold text-[16px] md:text-[20px]">
                     {service}
                   </span>
                 </div>
