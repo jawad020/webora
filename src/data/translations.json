@@ -4,7 +4,7 @@
       "home": "Accueil",
       "services": "Services",
       "projects": "Projets",
-      "team": "Notre Équipe",
+      "about": "À Propos",
       "contact": "Contact",
       "letsTalk": "Discutons",
       "startProject": "Démarrer un projet"
@@ -61,6 +61,11 @@
         }
       }
     },
+    "servicesOverview": {
+      "title": "Nos Services",
+      "subtitle": "Découvrez nos solutions numériques complètes.",
+      "viewAll": "Voir tous les services"
+    },
     "process": {
       "title": "Notre Processus",
       "subtitle": "Une méthode claire et structurée pour garantir la réussite de votre projet.",
@@ -110,6 +115,10 @@
         }
       }
     },
+    "reviews": {
+      "title": "Avis Clients",
+      "subtitle": "Ce que nos clients disent de leur expérience avec WEBORA."
+    },
     "testimonials": {
       "title": "Témoignages Clients",
       "subtitle": "Ce qu'ils disent de notre collaboration."
@@ -143,6 +152,17 @@
         "error": "Une erreur est survenue."
       }
     },
+    "about": {
+      "title": "À Propos de WEBORA",
+      "subtitle": "Agence digitale au service de votre croissance.",
+      "content1": "WEBORA est une agence digitale spécialisée dans la création de solutions numériques modernes pour les entreprises souhaitant développer leur présence en ligne et renforcer leur identité de marque.",
+      "content2": "Notre mission est d'aider les entreprises à transformer leurs idées en plateformes numériques performantes. Nous concevons des sites web professionnels, des applications web sur mesure et des stratégies de marketing digital qui aident les entreprises à améliorer leur visibilité et à atteindre une croissance durable.",
+      "content3": "Chez WEBORA, nous combinons créativité, réflexion stratégique et expertise technique pour offrir des solutions adaptées aux besoins uniques de chaque client.",
+      "content4": "Notre équipe accompagne les entreprises tout au long de leur parcours numérique, de l'analyse initiale du projet au design, développement, lancement et optimisation continue.",
+      "content5": "Par un engagement envers la qualité, l'innovation et les résultats, WEBORA fournit des solutions numériques fiables et modernes qui aident les entreprises à réussir dans un monde digital.",
+      "teamTitle": "Notre Équipe Fondatrice",
+      "teamSubtitle": "Rencontrez les fondateurs de WEBORA."
+    },
     "footer": {
       "description": "Agence digitale accompagnant les entreprises ambitieuses dans leur transformation technologique et stratégique.",
       "quickLinks": "Liens Rapides",
@@ -155,7 +175,7 @@
       "home": "Home",
       "services": "Services",
       "projects": "Projects",
-      "team": "Our Team",
+      "about": "About",
       "contact": "Contact",
       "letsTalk": "Let's Talk",
       "startProject": "Start a Project"
@@ -212,6 +232,11 @@
         }
       }
     },
+    "servicesOverview": {
+      "title": "Our Services",
+      "subtitle": "Discover our comprehensive digital solutions.",
+      "viewAll": "View All Services"
+    },
     "process": {
       "title": "Our Process",
       "subtitle": "A clear, structured method to guarantee project success.",
@@ -261,6 +286,10 @@
         }
       }
     },
+    "reviews": {
+      "title": "Customer Reviews",
+      "subtitle": "What our clients say about their experience with WEBORA."
+    },
     "testimonials": {
       "title": "Client Testimonials",
       "subtitle": "What they say about working with us."
@@ -293,6 +322,17 @@
         "success": "Message sent successfully!",
         "error": "An error occurred."
       }
+    },
+    "about": {
+      "title": "About WEBORA",
+      "subtitle": "Digital agency serving your growth.",
+      "content1": "WEBORA is a digital agency focused on creating modern digital solutions for businesses that want to grow their online presence and strengthen their brand identity.",
+      "content2": "Our mission is to help companies transform their ideas into powerful digital platforms. We design professional websites, custom web applications, and digital marketing strategies that help businesses improve visibility and achieve sustainable growth.",
+      "content3": "At WEBORA, we combine creativity, strategic thinking, and technical expertise to deliver solutions tailored to the unique needs of each client.",
+      "content4": "Our team supports businesses throughout their digital journey, from initial project analysis to design, development, launch, and continuous optimization.",
+      "content5": "Through a commitment to quality, innovation, and results, WEBORA provides reliable and modern digital solutions that help businesses succeed in a digital world.",
+      "teamTitle": "Our Founding Team",
+      "teamSubtitle": "Meet the founders of WEBORA."
     },
     "footer": {
       "description": "Digital agency guiding ambitious companies through their technological and strategic transformation.",

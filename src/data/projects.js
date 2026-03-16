@@ -1,76 +1,44 @@
-import crmImage from '../assets/crm.png';
-import Architecture from '../assets/Architecture.png';
-import WeboraSite from '../assets/mern-engineers.png';
-import Koshank from '../assets/koshank.png';
-import DineshPortfolio from '../assets/dinesh-portfolio.png';
-import KoshankInvoice from '../assets/koshankInvoice.png';
-import TTS from '../assets/TTS.png';
-import Hulu from '../assets/hulu.png';
-import NxtKisan from '../assets/nxtkisan.png';
+import kokokidsImg from "../assets/kokokids-preview.png";
+import amglegisinnImg from "../assets/amglegisinn-preview.png";
+import ladiesclosetImg from "../assets/ladiescloset-preview.png";
+import saviVisaImg from "../assets/savivisa-preview.png";
 
 const projects = [
   {
     id: 1,
-    title: "CRM – Customer Relationship Management",
-    tags: ["React", "Node.js", "MySQL"],
-    image: crmImage,
-    link: "/",
+    title: "KokoKids",
+    description:
+      "An e-commerce website for kids' clothing featuring intuitive browsing and a responsive shopping experience.",
+    tags: ["E-commerce", "Shopify", "Responsive"],
+    image: kokokidsImg,
+    link: "http://kokokids.pk",
   },
   {
     id: 2,
-    title: "ArchitectureMart – Personal Project",
-    tags: ["MERN", "Payment Gateway", "Admin Panel"],
-    image: Architecture,
-    link: "https://architecture-mart07.vercel.app/home",
+    title: "AMG Legisinn",
+    description:
+      "A professional consultancy website featuring service showcases and responsive design.",
+    tags: ["Consultancy", "Professional", "Responsive"],
+    image: amglegisinnImg,
+    link: "https://www.amglegisinn.com",
   },
   {
     id: 3,
-    title: "WEBORA – Agency Website",
-    tags: ["React", "Framer Motion", "Tailwind CSS"],
-    image: WeboraSite,
-    link: "#",
+    title: "Ladies Closet",
+    description:
+      "A Pakistan-focused online store for ladies' dresses with user-friendly product browsing, mobile responsiveness, and a modern layout.",
+    tags: ["E-commerce", "Fashion", "Mobile-First"],
+    image: ladiesclosetImg,
+    link: "https://ladiescloset.store/",
   },
   {
     id: 4,
-    title: "Koshank – Agency Website",
-    tags: ["React", "Responsive Design", "Payment Gateway"],
-    image: Koshank,
-    link: "https://koshank-testing.netlify.app",
-  },
-  {
-    id: 5,
-    title: "Dinesh Pawar – Personal Portfolio",
-    tags: ["React", "Framer Motion", "YouTube Embed"],
-    image: DineshPortfolio,
-    link: "https://dinesh-pawar.netlify.app",
-  },
-  {
-    id: 6,
-    title: "NxtKisan – AgriTech E-Commerce",
-    tags: ["Socket.io", "AI Integration", "E-Commerce"],
-    image: NxtKisan,
-    link: "https://nxtkisan.vercel.app/",
-  },
-  {
-    id: 7,
-    title: "Invoice Generator – Koshank Pvt. Ltd.",
-    tags: ["React", "Firebase", "jsPDF"],
-    image: KoshankInvoice,
-    link: "https://koshank-invoice.netlify.app",
-  },
-  {
-    id: 8,
-    title: "AI Text-to-Speech – Personal Project",
-    tags: ["React", "React Speech Kit"],
-    image: TTS,
-    link: "https://ai-text-to-speech-app.netlify.app",
-  },
-  {
-    id: 9,
-    title: "Hulu Clone – Personal Project",
-    tags: ["HTML", "CSS", "Responsive Design"],
-    image: Hulu,
-    link: "https://dineshpawar7.github.io/huluapp",
+    title: "Savi Visa Consultant",
+    description:
+      "A consultancy website for international visa services with offices in Egypt and Oman.",
+    tags: ["Consultancy", "International", "Multi-location"],
+    image: saviVisaImg,
+    link: "https://www.savisaconsultant.com/",
   },
 ];
 

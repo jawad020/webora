@@ -1,29 +1,23 @@
 import React from "react";
-import HeroMove from "../components/ui/HeroMove";
-import ContactUs from "../components/ContactUs";
-import Testimonials from "../components/Testimonials";
-import Footer from "../components/Footer";
 import OurProjects from "../components/OurProjects";
+import FinalCTA from "../components/FinalCTA";
+import Footer from "../components/Footer";
 import Breadcrumb from "../components/ui/Breadcrumb";
+import { useLanguage } from "../context/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
   const breadcrumbPath = [
-    { label: "Home", href: "/" },
-    { label: "Projects", href: "/projects" },
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.projects"), href: "/projects" },
   ];
   return (
-    <div>
-      <div>
-        <Breadcrumb path={breadcrumbPath} heading="Projects" />
-      </div>
+    <div className="bg-[#0A0F1C] min-h-screen">
+      <Breadcrumb path={breadcrumbPath} heading={t("portfolio.title")} />
 
-      <div className="bg-[#ffffff]">
-        <OurProjects />
-      </div>
+      <OurProjects />
 
-      <ContactUs />
-
-      <Testimonials />
+      <FinalCTA />
 
       <Footer />
     </div>

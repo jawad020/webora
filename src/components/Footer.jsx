@@ -25,7 +25,7 @@ export default function Footer() {
       { label: t("nav.home"), to: "/" },
       { label: t("nav.services"), to: "/services" },
       { label: t("nav.projects"), to: "/projects" },
-      { label: t("nav.team"), to: "/team" },
+      { label: t("nav.about"), to: "/about" },
       { label: t("nav.contact"), to: "/contact" },
     ],
     "Legal": [

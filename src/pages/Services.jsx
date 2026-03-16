@@ -1,26 +1,23 @@
 import React from "react";
 import OurServices from "../components/OurServices";
-import ContactUs from "../components/ContactUs";
-import Testimonials from "../components/Testimonials";
+import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/ui/Breadcrumb";
+import { useLanguage } from "../context/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
   const breadcrumbPath = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.services"), href: "/services" },
   ];
   return (
-    <div>
-      <div>
-        <Breadcrumb path={breadcrumbPath} heading="Services" />
-      </div>
+    <div className="bg-[#0A0F1C] min-h-screen">
+      <Breadcrumb path={breadcrumbPath} heading={t("services.title")} />
 
       <OurServices />
 
-      <ContactUs />
-
-      <Testimonials />
+      <FinalCTA />
 
       <Footer />
     </div>

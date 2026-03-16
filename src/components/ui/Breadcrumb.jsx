@@ -6,24 +6,27 @@ import HeroMove from "./HeroMove";
 const Breadcrumb = ({ path = [], heading = "" }) => {
   return (
     <>
-      <div className="bg-black h-[200px] w-full flex flex-col justify-center items-center text-white text-sm px-4">
+      <div className="bg-[#0A0F1C] h-[200px] w-full flex flex-col justify-center items-center text-white text-sm px-4 border-b border-white/5 relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute top-0 left-1/3 w-72 h-72 bg-[#0066FF] opacity-10 rounded-full blur-[100px] pointer-events-none" />
+
         {heading && (
-          <h2 className="text-sectionTitle font-bold mb-6 capitalize text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 capitalize text-center relative z-10">
             {heading}
           </h2>
         )}
 
-        <div className="flex items-center space-x-1 text-base">
+        <div className="flex items-center space-x-1 text-base relative z-10">
           {path.map((item, index) => (
             <div key={index} className="flex items-center">
               <Link
                 to={item.href}
-                className="capitalize hover:underline hover:text-brand transition"
+                className="capitalize hover:text-[#00A3FF] transition text-gray-400"
               >
                 {item.label}
               </Link>
               {index < path.length - 1 && (
-                <IoIosArrowForward className="text-gray-400 mx-2 text-base" />
+                <IoIosArrowForward className="text-gray-500 mx-2 text-base" />
               )}
             </div>
           ))}
