@@ -13,7 +13,7 @@ const reviews = [
       en: "WEBORA created our company website and the result exceeded our expectations. The design is modern and our online visibility improved significantly.",
     },
     image:
-      "https://ui-avatars.com/api/?name=Sophie+Martin&background=0066FF&color=fff&size=200",
+      "https://ui-avatars.com/api/?name=Sophie+Martin&background=FF4FA3&color=fff&size=200",
   },
   {
     name: "Marc Dupont",
@@ -24,7 +24,7 @@ const reviews = [
       en: "Very professional team. They helped us launch our online store and provided excellent support throughout the project.",
     },
     image:
-      "https://ui-avatars.com/api/?name=Marc+Dupont&background=111827&color=00A3FF&size=200",
+      "https://ui-avatars.com/api/?name=Marc+Dupont&background=111827&color=FF2D8D&size=200",
   },
   {
     name: "Laura Bernard",
@@ -35,7 +35,7 @@ const reviews = [
       en: "Thanks to WEBORA our website now looks professional and performs much better. Highly recommended.",
     },
     image:
-      "https://ui-avatars.com/api/?name=Laura+Bernard&background=0066FF&color=fff&size=200",
+      "https://ui-avatars.com/api/?name=Laura+Bernard&background=FF4FA3&color=fff&size=200",
   },
   {
     name: "Thomas Leroy",
@@ -46,7 +46,7 @@ const reviews = [
       en: "Great communication and fast delivery. The final result perfectly matched what we needed for our business.",
     },
     image:
-      "https://ui-avatars.com/api/?name=Thomas+Leroy&background=111827&color=00A3FF&size=200",
+      "https://ui-avatars.com/api/?name=Thomas+Leroy&background=111827&color=FF2D8D&size=200",
   },
 ];
 
@@ -68,8 +68,8 @@ export default function CustomerReviews() {
         {/* Header */}
         <div className="text-center mb-16">
           <span
-            className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4"
+            className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4"
           >
             WEBORA Agency
           </span>
@@ -93,12 +93,12 @@ export default function CustomerReviews() {
               className={`relative rounded-2xl p-8 border bg-[#111827]/60 backdrop-blur-sm
                          transition-all duration-500 ${
                            index === current
-                             ? "border-[#0066FF]/40 shadow-[0_8px_40px_rgba(0,102,255,0.15)]"
+                             ? "border-[#FF4FA3]/40 shadow-[0_8px_40px_rgba(255,79,163,0.15)]"
                              : "border-white/8"
                          }`}
             >
               {/* Big quote mark */}
-              <span className="absolute top-4 right-6 text-[60px] leading-none text-[#0066FF]/15 font-serif select-none">
+              <span className="absolute top-4 right-6 text-[60px] leading-none text-[#FF4FA3]/15 font-serif select-none">
                 "
               </span>
 
@@ -107,7 +107,7 @@ export default function CustomerReviews() {
                 {Array(review.rating)
                   .fill(0)
                   .map((_, i) => (
-                    <AiFillStar key={i} className="text-[#0066FF] text-lg" />
+                    <AiFillStar key={i} className="text-[#FF4FA3] text-lg" />
                   ))}
               </div>
 
@@ -121,7 +121,7 @@ export default function CustomerReviews() {
                 <img
                   src={review.image}
                   alt={review.name}
-                  className="w-11 h-11 rounded-full border-2 border-[#0066FF]/40"
+                  className="w-11 h-11 rounded-full border-2 border-[#FF4FA3]/40"
                 />
                 <div>
                   <p className="font-semibold text-white text-sm">
@@ -142,7 +142,7 @@ export default function CustomerReviews() {
               onClick={() => setCurrent(i)}
               className={`rounded-full transition-all duration-300 ${
                 i === current
-                  ? "w-8 h-2 bg-[#0066FF]"
+                  ? "w-8 h-2 bg-[#FF4FA3]"
                   : "w-2 h-2 bg-white/20 hover:bg-white/40"
               }`}
             />

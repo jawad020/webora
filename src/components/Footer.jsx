@@ -60,7 +60,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-white/10 bg-[#111827]
                              flex items-center justify-center text-gray-400
-                             hover:bg-[#0066FF] hover:border-[#0066FF] hover:text-white
+                             hover:bg-[#FF4FA3] hover:border-[#FF4FA3] hover:text-white
                              transition-all duration-300 shadow-md"
                 >
                   <Icon size={16} />
@@ -80,7 +80,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       to={to}
-                      className="text-gray-400 text-sm hover:text-[#00A3FF] transition-colors duration-200"
+                      className="text-gray-400 text-sm hover:text-[#FF2D8D] transition-colors duration-200"
                     >
                       {label}
                     </Link>
@@ -96,13 +96,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-sm text-gray-400">
             <div className="flex flex-col">
               <span className="text-white/40 uppercase text-xs mb-1">{t("footer.contactInfo")}</span>
-              <a href="mailto:contact.weboraa@gmail.com" className="hover:text-[#00A3FF] transition-colors duration-200">
+              <a href="mailto:contact.weboraa@gmail.com" className="hover:text-[#FF2D8D] transition-colors duration-200">
                 contact.weboraa@gmail.com
               </a>
             </div>
             <div className="flex flex-col">
               <span className="text-white/40 uppercase text-xs mb-1">WhatsApp</span>
-              <a href="https://wa.me/33755769741" target="_blank" rel="noopener noreferrer" className="hover:text-[#00A3FF] transition-colors duration-200">
+              <a href="https://wa.me/33755769741" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF2D8D] transition-colors duration-200">
                 +33 7 55 76 97 41
               </a>
             </div>

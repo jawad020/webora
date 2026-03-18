@@ -74,7 +74,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0066FF, #00A3FF);
+  background: linear-gradient(135deg, #FF4FA3, #FF2D8D);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@
 .project-card__visit-btn:hover {
   box-shadow: 0 6px 30px rgba(0, 102, 255, 0.6);
   transform: translateY(0) scale(1.1) !important;
-  background: linear-gradient(135deg, #0052cc, #0090e0);
+  background: linear-gradient(135deg, #e8458f, #e0207a);
 }
 
 /* --- Card Body --- */
@@ -123,7 +123,7 @@
   text-transform: uppercase;
   border: 1px solid rgba(0, 163, 255, 0.2);
   background: rgba(0, 102, 255, 0.08);
-  color: #6db8ff;
+  color: #ff8ac4;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -151,12 +151,12 @@
 }
 
 .project-card:hover .project-card__title {
-  color: #6db8ff;
+  color: #ff8ac4;
 }
 
 /* --- Arrow Button --- */
 .project-card__arrow-btn {
-  background: linear-gradient(135deg, #0066FF, #00A3FF);
+  background: linear-gradient(135deg, #FF4FA3, #FF2D8D);
   color: #ffffff;
   padding: 0.625rem;
   border-radius: 50%;

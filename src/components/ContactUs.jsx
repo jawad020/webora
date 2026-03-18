@@ -37,7 +37,7 @@ export default function ContactUs() {
   return (
     <section className="py-24 px-4 md:px-8 bg-[#0A0F1C] relative">
       {/* Background elements */}
-      <div className="absolute top-[20%] right-0 w-[600px] h-[600px] bg-[#0066FF]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-[20%] right-0 w-[600px] h-[600px] bg-[#FF4FA3]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -48,12 +48,12 @@ export default function ContactUs() {
       >
         {/* Contact Info Panel */}
         <div className="w-full lg:w-1/3">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             {t("contact.title")}
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Get In <span className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF] bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D] bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
             {t("contact.subtitle")}
@@ -62,7 +62,7 @@ export default function ContactUs() {
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-[#111827] border border-white/10 flex items-center justify-center shrink-0">
-                <Mail className="w-5 h-5 text-[#00A3FF]" />
+                <Mail className="w-5 h-5 text-[#FF2D8D]" />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Email</p>
@@ -72,7 +72,7 @@ export default function ContactUs() {
 
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-[#111827] border border-white/10 flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-[#00A3FF]" />
+                <Phone className="w-5 h-5 text-[#FF2D8D]" />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">WhatsApp</p>
@@ -82,7 +82,7 @@ export default function ContactUs() {
 
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-[#111827] border border-white/10 flex items-center justify-center shrink-0">
-                <Clock className="w-5 h-5 text-[#00A3FF]" />
+                <Clock className="w-5 h-5 text-[#FF2D8D]" />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Business Hours</p>
@@ -95,15 +95,15 @@ export default function ContactUs() {
             <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider font-semibold">Social Media</p>
             <div className="flex gap-4">
               <a href="https://wa.me/33755769741" target="_blank" rel="noopener noreferrer" 
-                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#0066FF] hover:border-[#0066FF] transition-all">
+                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#FF4FA3] hover:border-[#FF4FA3] transition-all">
                 <FaWhatsapp size={18} />
               </a>
               <a href="https://www.instagram.com/contact.webora" target="_blank" rel="noopener noreferrer"
-                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#0066FF] hover:border-[#0066FF] transition-all">
+                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#FF4FA3] hover:border-[#FF4FA3] transition-all">
                 <FaInstagram size={18} />
               </a>
               <a href="https://www.linkedin.com/in/entreprise-webora-1b63773b7" target="_blank" rel="noopener noreferrer"
-                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#0066FF] hover:border-[#0066FF] transition-all">
+                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#FF4FA3] hover:border-[#FF4FA3] transition-all">
                 <FaLinkedinIn size={18} />
               </a>
             </div>
@@ -114,7 +114,7 @@ export default function ContactUs() {
         <div className="w-full lg:w-2/3">
           <div className="bg-[#111827]/80 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
             {/* Form Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#0066FF]/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF4FA3]/10 rounded-full blur-[80px] pointer-events-none" />
 
             <form ref={form} onSubmit={sendEmail} className="relative z-10 space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ export default function ContactUs() {
                     type="text"
                     name="first_name"
                     required
-                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#0066FF]/50 transition-colors"
+                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#FF4FA3]/50 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
@@ -133,7 +133,7 @@ export default function ContactUs() {
                     type="email"
                     name="email"
                     required
-                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#0066FF]/50 transition-colors"
+                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#FF4FA3]/50 transition-colors"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function ContactUs() {
                   <input
                     type="text"
                     name="company"
-                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#0066FF]/50 transition-colors"
+                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#FF4FA3]/50 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
@@ -153,7 +153,7 @@ export default function ContactUs() {
                     type="text"
                     name="mobile"
                     required
-                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#0066FF]/50 transition-colors"
+                    className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#FF4FA3]/50 transition-colors"
                   />
                 </div>
               </div>
@@ -164,15 +164,15 @@ export default function ContactUs() {
                   name="message"
                   rows="5"
                   required
-                  className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#0066FF]/50 transition-colors resize-none"
+                  className="w-full bg-[#0A0F1C] border border-white/10 text-white px-5 py-4 rounded-xl focus:outline-none focus:border-[#FF4FA3]/50 transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full md:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-[#0066FF] to-[#00A3FF] 
-                           text-white font-semibold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(0,102,255,0.4)]
+                className="w-full md:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D] 
+                           text-white font-semibold px-8 py-4 rounded-xl hover:shadow-[0_0_20px_rgba(255,79,163,0.4)]
                            transition-all hover:-translate-y-1 active:translate-y-0 disabled:opacity-70 disabled:hover:translate-y-0"
               >
                 {isSubmitting ? "Sending..." : t("contact.form.submit")}

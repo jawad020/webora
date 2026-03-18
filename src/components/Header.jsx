@@ -28,7 +28,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0A0F1C]/95 backdrop-blur-md shadow-[0_2px_24px_rgba(0,102,255,0.12)] border-b border-[#0066FF]/15"
+          ? "bg-[#0A0F1C]/95 backdrop-blur-md shadow-[0_2px_24px_rgba(255,79,163,0.12)] border-b border-[#FF4FA3]/15"
           : "bg-[#0A0F1C] border-b border-white/5"
       } text-white`}
     >
@@ -51,7 +51,7 @@ const Header = () => {
               {t(`nav.${labelKey}`)}
               <span
                 className="absolute bottom-0.5 left-4 right-4 h-[2px] rounded-full
-                           bg-gradient-to-r from-[#0066FF] to-[#00A3FF]
+                           bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D]
                            scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
               />
             </Link>
@@ -71,10 +71,10 @@ const Header = () => {
 
           <Link to="/contact">
             <button
-              className="bg-gradient-to-r from-[#0066FF] to-[#00A3FF]
+              className="bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D]
                          text-white font-semibold text-sm py-2.5 px-6 rounded-full
-                         shadow-[0_0_20px_rgba(0,102,255,0.35)]
-                         hover:shadow-[0_0_30px_rgba(0,102,255,0.55)]
+                         shadow-[0_0_20px_rgba(255,79,163,0.35)]
+                         hover:shadow-[0_0_30px_rgba(255,79,163,0.55)]
                          hover:scale-105 active:scale-95
                          transition-all duration-200"
             >
@@ -115,14 +115,14 @@ const Header = () => {
           {navLinks.map(({ to, labelKey }) => (
             <Link key={to} to={to} onClick={closeMenu}
               className="block px-4 py-2.5 text-gray-400 hover:text-white
-                         hover:bg-[#0066FF]/10 rounded-lg transition-all duration-200 font-medium text-center">
+                         hover:bg-[#FF4FA3]/10 rounded-lg transition-all duration-200 font-medium text-center">
               {t(`nav.${labelKey}`)}
             </Link>
           ))}
           <div className="pt-4">
             <Link to="/contact" onClick={closeMenu}>
-              <button className="w-full bg-gradient-to-r from-[#0066FF] to-[#00A3FF]
-                                 text-white font-semibold py-3 rounded-full transition-all duration-200 shadow-[0_0_15px_rgba(0,102,255,0.3)]">
+              <button className="w-full bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D]
+                                 text-white font-semibold py-3 rounded-full transition-all duration-200 shadow-[0_0_15px_rgba(255,79,163,0.3)]">
                 {t("nav.letsTalk")}
               </button>
             </Link>

@@ -13,12 +13,12 @@ const WorkingProcess = () => {
   return (
     <section className="py-24 px-4 md:px-8 bg-[#111827] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0066FF]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FF4FA3]/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             {t("process.title")}
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -47,11 +47,11 @@ const WorkingProcess = () => {
                 {/* Step Circle */}
                 <div className="w-24 h-24 mx-auto bg-[#0A0F1C] border-2 border-white/10 
                                 rounded-full flex items-center justify-center relative z-10 mb-8
-                                group-hover:border-[#0066FF] transition-colors duration-300 shadow-xl">
-                  <Icon className="w-8 h-8 text-[#00A3FF] group-hover:scale-110 transition-transform duration-300" />
+                                group-hover:border-[#FF4FA3] transition-colors duration-300 shadow-xl">
+                  <Icon className="w-8 h-8 text-[#FF2D8D] group-hover:scale-110 transition-transform duration-300" />
                   
                   {/* Step Number Badge */}
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#0066FF] rounded-full 
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#FF4FA3] rounded-full 
                                   flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {num}
                   </div>

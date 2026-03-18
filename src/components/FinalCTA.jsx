@@ -10,8 +10,8 @@ const FinalCTA = () => {
     <section className="py-24 relative overflow-hidden bg-[#0A0F1C]">
       {/* Background gradients */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-gradient-to-b from-[#0066FF]/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-t from-[#00A3FF]/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-gradient-to-b from-[#FF4FA3]/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-t from-[#FF2D8D]/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
@@ -20,7 +20,7 @@ const FinalCTA = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#111827]/60 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 md:p-16 shadow-[0_0_50px_rgba(0,102,255,0.1)]"
+          className="bg-[#111827]/60 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 md:p-16 shadow-[0_0_50px_rgba(255,79,163,0.1)]"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {t("cta.title")}
@@ -32,10 +32,10 @@ const FinalCTA = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contact">
               <button 
-                className="w-full sm:w-auto bg-gradient-to-r from-[#0066FF] to-[#00A3FF]
+                className="w-full sm:w-auto bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D]
                            text-white font-semibold py-4 px-10 rounded-full
-                           shadow-[0_0_20px_rgba(0,102,255,0.4)]
-                           hover:shadow-[0_0_40px_rgba(0,102,255,0.6)]
+                           shadow-[0_0_20px_rgba(255,79,163,0.4)]
+                           hover:shadow-[0_0_40px_rgba(255,79,163,0.6)]
                            hover:scale-105 active:scale-95
                            transition-all duration-300 text-lg"
               >

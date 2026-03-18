@@ -10,7 +10,7 @@ const testimonials = [
     rating: 5,
     review:
       "Partnering with Webora elevated our CRM platform's performance beyond expectations. The team delivered clean code and a stunning UI on time.",
-    image: "https://ui-avatars.com/api/?name=Alex&background=0066FF&color=fff&size=200",
+    image: "https://ui-avatars.com/api/?name=Alex&background=FF4FA3&color=fff&size=200",
   },
   {
     name: "Your Name Here",
@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5,
     review:
       "Become our client and enjoy the privilege of sharing your testimonial here. We deliver results that speak for themselves.",
-    image: "https://ui-avatars.com/api/?name=Client&background=111827&color=0066FF&size=200",
+    image: "https://ui-avatars.com/api/?name=Client&background=111827&color=FF4FA3&size=200",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             WEBORA Agency
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
@@ -57,17 +57,17 @@ export default function Testimonials() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="relative rounded-2xl p-8 md:p-12 border border-white/8 bg-white/3
-                     shadow-[0_8px_40px_rgba(0,102,255,0.08)]"
+                     shadow-[0_8px_40px_rgba(255,79,163,0.08)]"
         >
           {/* Big quote mark */}
-          <span className="absolute top-6 right-8 text-[80px] leading-none text-[#0066FF]/15 font-serif select-none">
+          <span className="absolute top-6 right-8 text-[80px] leading-none text-[#FF4FA3]/15 font-serif select-none">
             "
           </span>
 
           {/* Stars */}
           <div className="flex gap-1 mb-6">
             {Array(activeTestimonial.rating).fill(0).map((_, i) => (
-              <AiFillStar key={i} className="text-[#0066FF] text-xl" />
+              <AiFillStar key={i} className="text-[#FF4FA3] text-xl" />
             ))}
           </div>
 
@@ -79,7 +79,7 @@ export default function Testimonials() {
           {/* Author */}
           <div className="flex items-center gap-4">
             <img src={activeTestimonial.image} alt={activeTestimonial.name}
-                 className="w-12 h-12 rounded-full border-2 border-[#0066FF]/40" />
+                 className="w-12 h-12 rounded-full border-2 border-[#FF4FA3]/40" />
             <div>
               <p className="font-semibold text-white">{activeTestimonial.name}</p>
               <p className="text-sm text-gray-400">{activeTestimonial.role}</p>
@@ -95,7 +95,7 @@ export default function Testimonials() {
               onClick={() => setCurrent(i)}
               className={`rounded-full transition-all duration-300 ${
                 i === current
-                  ? "w-8 h-2 bg-[#0066FF]"
+                  ? "w-8 h-2 bg-[#FF4FA3]"
                   : "w-2 h-2 bg-white/20 hover:bg-white/40"
               }`}
             />

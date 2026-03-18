@@ -8,7 +8,7 @@ const Breadcrumb = ({ path = [], heading = "" }) => {
     <>
       <div className="bg-[#0A0F1C] h-[200px] w-full flex flex-col justify-center items-center text-white text-sm px-4 border-b border-white/5 relative overflow-hidden">
         {/* Background glow */}
-        <div className="absolute top-0 left-1/3 w-72 h-72 bg-[#0066FF] opacity-10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/3 w-72 h-72 bg-[#FF4FA3] opacity-10 rounded-full blur-[100px] pointer-events-none" />
 
         {heading && (
           <h2 className="text-3xl md:text-4xl font-bold mb-6 capitalize text-center relative z-10">
@@ -21,7 +21,7 @@ const Breadcrumb = ({ path = [], heading = "" }) => {
             <div key={index} className="flex items-center">
               <Link
                 to={item.href}
-                className="capitalize hover:text-[#00A3FF] transition text-gray-400"
+                className="capitalize hover:text-[#FF2D8D] transition text-gray-400"
               >
                 {item.label}
               </Link>

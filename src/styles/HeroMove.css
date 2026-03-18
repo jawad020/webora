@@ -1,0 +1,226 @@
+/* ═══════════════════════════════════════════════
+   HEROMOVE — Premium Floating Feature Strip
+   ═══════════════════════════════════════════════ */
+
+/* Outer wrapper — centers the floating container */
+.heromove-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* The main floating container */
+.heromove-container {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  background: linear-gradient(135deg, #FF4FA3, #FF2D8D);
+  border-radius: 14px;
+  padding: 14px 24px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 32px rgba(255, 45, 141, 0.3),
+    0 2px 8px rgba(255, 79, 163, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Soft glow aura behind container */
+.heromove-container::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 79, 163, 0.25), rgba(255, 45, 141, 0.15));
+  filter: blur(20px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Subtle shimmer overlay */
+.heromove-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 75%,
+    transparent 100%
+  );
+  animation: shimmer 8s infinite linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(25%); }
+}
+
+/* Hover: slight lift + intensified glow */
+.heromove-container:hover {
+  transform: scale(1.015) translateY(-2px);
+  box-shadow:
+    0 12px 40px rgba(255, 45, 141, 0.45),
+    0 4px 12px rgba(255, 79, 163, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ── Track wrapper — masks overflow ── */
+.heromove-track-wrapper {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /* Fade edges for seamless looping */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+/* ── The scrolling track ── */
+.heromove-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.heromove-track-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Individual service item ── */
+.heromove-item {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  z-index: 2;
+}
+
+.heromove-item:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Diamond separator ── */
+.heromove-separator {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.65rem;
+  margin: 0 16px;
+  flex-shrink: 0;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.heromove-container:hover .heromove-separator {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════════ */
+
+/* Tablets */
+@media (max-width: 1023.98px) {
+  .heromove-container {
+    border-radius: 12px;
+    padding: 12px 20px;
+  }
+
+  .heromove-item {
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+  }
+
+  .heromove-separator {
+    margin: 0 12px;
+  }
+
+  .heromove-track-wrapper {
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .heromove-outer {
+    padding: 0 0.75rem;
+  }
+
+  .heromove-container {
+    border-radius: 12px;
+    padding: 10px 16px;
+  }
+
+  .heromove-item {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    padding: 3px 6px;
+  }
+
+  .heromove-separator {
+    font-size: 0.55rem;
+    margin: 0 10px;
+  }
+
+  .heromove-track-wrapper {
+    height: 32px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 479.98px) {
+  .heromove-outer {
+    padding: 0 0.5rem;
+  }
+
+  .heromove-container {
+    border-radius: 10px;
+    padding: 8px 12px;
+  }
+
+  .heromove-item {
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+
+  .heromove-separator {
+    font-size: 0.5rem;
+    margin: 0 8px;
+  }
+
+  .heromove-track-wrapper {
+    height: 28px;
+  }
+}

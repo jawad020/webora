@@ -42,8 +42,8 @@ const About = () => {
             className="text-center mb-16"
           >
             <span
-              className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-6"
+              className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-6"
             >
               WEBORA Agency
             </span>
@@ -81,8 +81,8 @@ const About = () => {
             className="text-center"
           >
             <span
-              className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4"
+              className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4"
             >
               WEBORA Team
             </span>

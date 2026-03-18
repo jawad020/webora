@@ -40,8 +40,8 @@ export default function OurServices() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             WEBORA Agency
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -61,13 +61,13 @@ export default function OurServices() {
               animate={{ opacity: hasReached ? 1 : 0, y: hasReached ? 0 : 30 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group relative rounded-2xl p-8 border border-white/8 bg-[#111827]/60 backdrop-blur-sm
-                         hover:border-[#0066FF]/40 hover:bg-[#111827]
-                         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,102,255,0.1)]
+                         hover:border-[#FF4FA3]/40 hover:bg-[#111827]
+                         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,79,163,0.1)]
                          transition-all duration-300 cursor-default flex flex-col h-full"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-6
-                              group-hover:bg-[#0066FF]/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-[#FF4FA3]/10 flex items-center justify-center mb-6
+                              group-hover:bg-[#FF4FA3]/20 transition-colors">
                 <span className="text-2xl">{service.icon}</span>
               </div>
 
@@ -82,9 +82,9 @@ export default function OurServices() {
               </p>
 
               {/* Hover glow dot */}
-              <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-[#0066FF]
+              <div className="absolute top-6 right-6 w-2 h-2 rounded-full bg-[#FF4FA3]
                               opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                              shadow-[0_0_8px_#0066FF]" />
+                              shadow-[0_0_8px_#FF4FA3]" />
             </motion.div>
           ))}
         </div>

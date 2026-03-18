@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: '#0066FF',
-        brandLight: '#00A3FF',
+        brand: '#FF4FA3',
+        brandLight: '#FF2D8D',
         navBg: '#050F1F',
         logoPink: '#FF3EA5',
         bg1: 'white',

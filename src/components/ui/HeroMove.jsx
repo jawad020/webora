@@ -1,6 +1,6 @@
 import React from "react";
-import { GiSevenPointedStar } from "react-icons/gi";
 import { motion } from "framer-motion";
+import "../../styles/HeroMove.css";
 
 const services = [
   "Création de sites web vitrines",
@@ -15,41 +15,36 @@ const services = [
 ];
 
 const HeroMove = () => {
-  const scrollingServices = [...services, ...services];
-
   return (
-    <div
-      className=" bg-brand px-6 py-2 overflow-hidden"
-      style={{ marginLeft: "0", marginRight: "0" }}
-    >
-      <div className="relative w-full h-12 flex items-center">
-        <motion.div
-          className="absolute flex whitespace-nowrap"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 30,
-            ease: "linear",
-          }}
-        >
-          {[...Array(2)].map((_, repeatIndex) => (
-            <div key={repeatIndex} className="flex  items-center">
-              {services.map((service, index) => (
-                <div
-                  key={`${repeatIndex}-${index}`}
-                  className="flex items-center px-3 gap-6 md:px-6 md:gap-12"
-                >
-                  <span className="text-black">
-                    <GiSevenPointedStar className="text-black text-[18px] md:text-[25px]" />
-                  </span>
-                  <span className="text-black font-semibold text-[16px] md:text-[20px]">
-                    {service}
-                  </span>
-                </div>
-              ))}
-            </div>
-          ))}
-        </motion.div>
+    <div className="heromove-outer">
+      <div className="heromove-container">
+        {/* Soft glow pseudo-element is handled via CSS */}
+        <div className="heromove-track-wrapper">
+          <motion.div
+            className="heromove-track"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 35,
+              ease: "linear",
+            }}
+          >
+            {[0, 1].map((repeatIndex) => (
+              <div key={repeatIndex} className="heromove-track-group">
+                {services.map((service, index) => (
+                  <React.Fragment key={`${repeatIndex}-${index}`}>
+                    <span className="heromove-item">
+                      {service}
+                    </span>
+                    <span className="heromove-separator" aria-hidden="true">
+                      ✦
+                    </span>
+                  </React.Fragment>
+                ))}
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );

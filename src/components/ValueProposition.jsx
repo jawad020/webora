@@ -47,11 +47,11 @@ const ValueProposition = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="p-8 rounded-2xl bg-[#111827]/50 border border-white/5 backdrop-blur-sm
-                           hover:bg-[#111827] hover:border-[#0066FF]/30 transition-all duration-300 group"
+                           hover:bg-[#111827] hover:border-[#FF4FA3]/30 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 rounded-xl bg-[#0066FF]/10 flex items-center justify-center mb-6
-                                group-hover:bg-[#0066FF]/20 transition-colors">
-                  <Icon className="w-7 h-7 text-[#00A3FF]" />
+                <div className="w-14 h-14 rounded-xl bg-[#FF4FA3]/10 flex items-center justify-center mb-6
+                                group-hover:bg-[#FF4FA3]/20 transition-colors">
+                  <Icon className="w-7 h-7 text-[#FF2D8D]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {t(`valueProp.cards.${card.key}.title`)}
@@ -66,7 +66,7 @@ const ValueProposition = () => {
       </div>
       
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#0066FF]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#FF4FA3]/5 blur-[120px] rounded-full pointer-events-none" />
     </section>
   );
 };

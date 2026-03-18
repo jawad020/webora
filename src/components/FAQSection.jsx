@@ -56,8 +56,8 @@ const FAQSection = () => {
     <section className="py-24 px-4 md:px-8 bg-[#111827] border-y border-white/5 relative">
       <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-[#0066FF]/30
-                           bg-[#0066FF]/10 text-[#00A3FF] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
+                           bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             WEBORA FAQ
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -75,7 +75,7 @@ const FAQSection = () => {
               <div 
                 key={index}
                 className={`border rounded-2xl overflow-hidden transition-all duration-300
-                            ${isOpen ? 'border-[#0066FF]/50 bg-[#0A0F1C]' : 'border-white/10 bg-[#111827] hover:border-white/20'}`}
+                            ${isOpen ? 'border-[#FF4FA3]/50 bg-[#0A0F1C]' : 'border-white/10 bg-[#111827] hover:border-white/20'}`}
               >
                 <button
                   className="w-full flex justify-between items-center px-6 py-5 text-left text-lg font-semibold text-white focus:outline-none"
@@ -86,7 +86,7 @@ const FAQSection = () => {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                     className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center
-                                ${isOpen ? 'bg-[#0066FF] text-white' : 'bg-white/5 text-gray-400'}`}
+                                ${isOpen ? 'bg-[#FF4FA3] text-white' : 'bg-white/5 text-gray-400'}`}
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>
@@ -112,7 +112,7 @@ const FAQSection = () => {
       </div>
       
       {/* Subtle background element */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#0066FF]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#FF4FA3]/5 rounded-full blur-[100px] pointer-events-none" />
     </section>
   );
 };
