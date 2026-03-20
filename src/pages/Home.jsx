@@ -6,6 +6,7 @@ import CustomerReviews from '../components/CustomerReviews'
 import FinalCTA from '../components/FinalCTA'
 import Footer from '../components/Footer'
 import TrustStats from '../components/TrustStats'
+import Statistics from '../components/Statistics'
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <Hero />
       
       {/* 2. Trust Stats */}
-      <TrustStats />
+      <Statistics />
       
       {/* 3. Short Services Overview */}
       <ServicesOverview />

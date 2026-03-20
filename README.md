@@ -8,7 +8,7 @@ A premium, modern, and fully responsive **Digital Agency Website** built to show
 
 ## 🚀 Live Demo
 
-> ✨ **[https://web-ora.netlify.app/](https://web-ora.netlify.app/)**
+> ✨ **[https://weborraa.netlify.app/](https://weborraa.netlify.app/)**
 
 ---
 
@@ -144,7 +144,7 @@ The production build will be output to the `dist/` directory.
 
 This project is deployed on **Netlify** with automatic deploys from the `main` branch.
 
-- **Live URL**: [https://web-ora.netlify.app/](https://web-ora.netlify.app/)
+- **Live URL**: [https://weborraa.netlify.app/](https://weborraa.netlify.app/)
 - **Build Command**: `npm run build`
 - **Publish Directory**: `dist`
 
