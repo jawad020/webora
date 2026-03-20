@@ -1,45 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useInView, animate } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-
-function useCountUp(end, duration = 2000, start = false) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!start) return;
-    let startTime = null;
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    };
-    requestAnimationFrame(step);
-  }, [end, duration, start]);
-
-  return count;
-}
 
 const TrustStats = () => {
   const { t } = useLanguage();
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   const stats = [
     { value: 150, suffix: '+', label: t('stats.projects') },
@@ -49,7 +13,7 @@ const TrustStats = () => {
   ];
 
   return (
-    <section ref={ref} className="py-12 md:py-16 px-4 md:px-8 border-t border-white/5 bg-[#0A0F1C]">
+    <section className="py-12 md:py-16 px-4 md:px-8 border-t border-white/5 bg-[#0A0F1C]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => (
@@ -57,7 +21,6 @@ const TrustStats = () => {
               key={index}
               stat={stat}
               index={index}
-              isVisible={isVisible}
             />
           ))}
         </div>
@@ -66,15 +29,29 @@ const TrustStats = () => {
   );
 };
 
-const StatItem = ({ stat, index, isVisible }) => {
-  const count = useCountUp(stat.value, 1500, isVisible);
-  
+const StatItem = ({ stat, index }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(0, stat.value, {
+        duration: 2,
+        delay: index * 0.1,
+        ease: "easeOut",
+        onUpdate: (latest) => setCount(Math.floor(latest))
+      });
+    }
+  }, [isInView, stat.value, index]);
+
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
       className="text-center group"
     >
       <div className="text-3xl md:text-5xl font-bold text-white mb-2">
