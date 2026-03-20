@@ -6,30 +6,30 @@ import { useLanguage } from "../context/LanguageContext";
 import "../styles/Projects.css";
 
 export default function OurProjects() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
-    <section className="py-20 px-4 md:px-8" style={{ background: "#111827" }}>
+    <section className="py-20 md:py-28 px-4 md:px-8" style={{ background: "#111827" }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-12 md:mb-14">
           <span
             className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
                            bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4"
           >
             WEBORA
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             {t("portfolio.title")}
           </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
             {t("portfolio.subtitle")}
           </p>
         </div>
 
         {/* Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -56,9 +56,14 @@ export default function OurProjects() {
                   src={project.image}
                   alt={project.title}
                   className="project-card__image"
+                  loading="lazy"
                 />
                 {/* Gradient overlay */}
-                <div className="project-card__overlay" />
+                <div className="project-card__overlay flex flex-col items-center justify-center bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100">
+                  <span className="text-white font-semibold text-lg opacity-0 translate-y-4 transition-all duration-400 group-hover:opacity-100 group-hover:translate-y-0 mt-8">
+                    {language === 'fr' ? 'Voir le projet →' : 'View Project →'}
+                  </span>
+                </div>
 
                 {/* Visit Website floating button - appears on hover */}
                 <a
@@ -66,7 +71,7 @@ export default function OurProjects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-card__visit-btn"
-                  title="Visit Website"
+                  title={language === 'fr' ? 'Visiter le site' : 'Visit Website'}
                 >
                   <HiExternalLink size={20} />
                 </a>
@@ -103,11 +108,9 @@ export default function OurProjects() {
                 </div>
 
                 {/* Description */}
-                {project.description && (
-                  <p className="project-card__description">
-                    {project.description}
-                  </p>
-                )}
+                <p className="project-card__description">
+                  {t(`projectsList.${project.id}.description`)}
+                </p>
               </div>
             </motion.div>
           ))}

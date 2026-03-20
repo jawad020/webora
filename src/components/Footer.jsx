@@ -28,9 +28,9 @@ export default function Footer() {
       { label: t("nav.about"), to: "/about" },
       { label: t("nav.contact"), to: "/contact" },
     ],
-    "Legal": [
-      { label: "Privacy Policy", to: "/policy" },
-      { label: "Terms of Service", to: "#" },
+    [t("footer.legal")]: [
+      { label: t("footer.privacyPolicy"), to: "/policy" },
+      { label: t("footer.termsOfService"), to: "#" },
     ]
   };
 
@@ -41,9 +41,12 @@ export default function Footer() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       style={{ background: "#0A0F1C" }}
-      className="border-t border-white/5 text-white"
+      className="border-t border-white/5 text-white relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+      {/* Subtle glow */}
+      <div className="absolute bottom-0 left-1/3 w-[500px] h-[300px] bg-[#FF4FA3]/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand col */}
           <div className="md:col-span-2 space-y-5">
@@ -58,10 +61,10 @@ export default function Footer() {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/10 bg-[#111827]
+                  className="w-10 h-10 rounded-xl border border-white/10 bg-[#111827]
                              flex items-center justify-center text-gray-400
                              hover:bg-[#FF4FA3] hover:border-[#FF4FA3] hover:text-white
-                             transition-all duration-300 shadow-md"
+                             hover:scale-110 transition-all duration-300 shadow-md"
                 >
                   <Icon size={16} />
                 </a>
@@ -80,7 +83,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       to={to}
-                      className="text-gray-400 text-sm hover:text-[#FF2D8D] transition-colors duration-200"
+                      className="text-gray-400 text-sm hover:text-[#FF2D8D] hover:translate-x-1 inline-block transition-all duration-200"
                     >
                       {label}
                     </Link>

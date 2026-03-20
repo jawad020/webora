@@ -6,7 +6,7 @@
       "projects": "Projets",
       "about": "À Propos",
       "contact": "Contact",
-      "letsTalk": "Discutons",
+      "letsTalk": "Discutons de votre projet",
       "startProject": "Démarrer un projet"
     },
     "hero": {
@@ -93,25 +93,35 @@
       "subtitle": "Découvrez nos réalisations et notre expertise technique.",
       "viewMore": "Voir les détails"
     },
+    "projectsList": {
+      "1": {
+        "description": "Un site e-commerce pour vêtements pour enfants, offrant une navigation intuitive et une expérience d'achat fluide et responsive."
+      },
+      "2": {
+        "description": "Un site de conseil professionnel conçu pour présenter clairement les services avec un design moderne et entièrement responsive."
+      },
+      "3": {
+        "description": "Une boutique en ligne dédiée à la mode féminine au Pakistan, avec une navigation simple, une compatibilité mobile et un design moderne."
+      },
+      "4": {
+        "description": "Un site de consultation spécialisé dans les services de visa internationaux, avec des bureaux en Égypte et à Oman."
+      }
+    },
     "valueProp": {
       "title": "Pourquoi choisir WEBORA ?",
       "subtitle": "Notre engagement : excellence, fiabilité et accompagnement sur le long terme.",
       "cards": {
-        "pro": {
-          "title": "Professionnalisme",
-          "desc": "Une équipe d'experts dédiés à la réussite de votre projet numérique avec des standards élevés."
+        "custom": {
+          "title": "Solutions sur mesure",
+          "desc": "Des solutions numériques adaptées aux besoins uniques de votre entreprise."
         },
-        "quality": {
-          "title": "Qualité Supérieure",
-          "desc": "Des designs premium, un code propre et des performances optimisées pour chaque projet."
-        },
-        "reliable": {
-          "title": "Fiabilité & Sécurité",
-          "desc": "Des infrastructures robustes et sécurisées sur lesquelles vous pouvez compter 24/7."
+        "design": {
+          "title": "Design moderne et performant",
+          "desc": "Conception premium, navigation fluide et rapidité d'exécution."
         },
         "support": {
-          "title": "Support Long Terme",
-          "desc": "Nous restons à vos côtés après le lancement pour faire évoluer votre plateforme."
+          "title": "Support et accompagnement",
+          "desc": "Une équipe dédiée pour vous accompagner avant, pendant et après votre projet."
         }
       }
     },
@@ -136,12 +146,22 @@
     "cta": {
       "title": "Prêt à transformer votre vision en réalité ?",
       "subtitle": "Rejoignez les entreprises qui font confiance à WEBORA pour leur stratégie digitale. Démarrons ensemble votre prochain grand projet.",
-      "primaryBtn": "Démarrer mon projet",
-      "secondaryBtn": "Contactez-nous"
+      "primaryBtn": "Démarrer un projet",
+      "secondaryBtn": "Discutons de votre projet"
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Écrivez-nous, nous vous répondrons dans les plus brefs délais.",
+      "getInTouch": "Restons en",
+      "getInTouchHighlight": "Contact",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp",
+      "businessHours": "Horaires",
+      "businessHoursValue": "Lun - Dim : 9h00 – 23h00",
+      "socialMedia": "Réseaux Sociaux",
+      "phone": "Téléphone",
+      "phoneLabel": "Numéro de téléphone *",
+      "sending": "Envoi en cours...",
       "form": {
         "name": "Nom complet",
         "email": "Adresse E-mail",
@@ -160,12 +180,16 @@
       "content3": "Chez WEBORA, nous combinons créativité, réflexion stratégique et expertise technique pour offrir des solutions adaptées aux besoins uniques de chaque client.",
       "content4": "Notre équipe accompagne les entreprises tout au long de leur parcours numérique, de l'analyse initiale du projet au design, développement, lancement et optimisation continue.",
       "content5": "Par un engagement envers la qualité, l'innovation et les résultats, WEBORA fournit des solutions numériques fiables et modernes qui aident les entreprises à réussir dans un monde digital.",
-      "teamTitle": "Notre Équipe Fondatrice",
-      "teamSubtitle": "Rencontrez les fondateurs de WEBORA."
+      "teamTitle": "Notre Équipe",
+      "teamSubtitle": "Des professionnels passionnés à votre service.",
+      "teamDescription": "Notre équipe est composée de développeurs expérimentés, de designers et de stratèges digitaux dédiés à la création de solutions numériques de haute qualité pour nos clients."
     },
     "footer": {
-      "description": "Agence digitale accompagnant les entreprises ambitieuses dans leur transformation technologique et stratégique.",
+      "description": "Nous aidons les entreprises à développer leur présence digitale.",
       "quickLinks": "Liens Rapides",
+      "legal": "Mentions Légales",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions d'Utilisation",
       "contactInfo": "Informations de Contact",
       "rights": "Tous droits réservés."
     }
@@ -177,7 +201,7 @@
       "projects": "Projects",
       "about": "About",
       "contact": "Contact",
-      "letsTalk": "Let's Talk",
+      "letsTalk": "Let's Discuss Your Project",
       "startProject": "Start a Project"
     },
     "hero": {
@@ -264,25 +288,35 @@
       "subtitle": "Discover our work and technical expertise.",
       "viewMore": "View Details"
     },
+    "projectsList": {
+      "1": {
+        "description": "An e-commerce website for kids' clothing featuring intuitive browsing and a responsive shopping experience."
+      },
+      "2": {
+        "description": "A professional consultancy website featuring service showcases and responsive design."
+      },
+      "3": {
+        "description": "A Pakistan-focused online store for ladies' dresses with user-friendly product browsing, mobile responsiveness, and a modern layout."
+      },
+      "4": {
+        "description": "A consultancy website for international visa services with offices in Egypt and Oman."
+      }
+    },
     "valueProp": {
       "title": "Why Choose WEBORA?",
       "subtitle": "Our commitment: excellence, reliability, and long-term support.",
       "cards": {
-        "pro": {
-          "title": "Professionalism",
-          "desc": "A dedicated team of experts ensuring high standards for your digital success."
+        "custom": {
+          "title": "Custom solutions",
+          "desc": "Digital solutions tailored to the unique needs of your business."
         },
-        "quality": {
-          "title": "Premium Quality",
-          "desc": "High-end designs, clean code, and optimized performance for every project."
-        },
-        "reliable": {
-          "title": "Reliability & Security",
-          "desc": "Robust, secure infrastructures you can rely on 24/7."
+        "design": {
+          "title": "Modern & high-performance design",
+          "desc": "Premium design, smooth navigation, and fast execution speed."
         },
         "support": {
-          "title": "Long-Term Support",
-          "desc": "We stand by your side post-launch to continually evolve your platform."
+          "title": "Dedicated support",
+          "desc": "A dedicated team to support you before, during, and after your project."
         }
       }
     },
@@ -307,12 +341,22 @@
     "cta": {
       "title": "Ready to turn your vision into reality?",
       "subtitle": "Join the companies trusting WEBORA with their digital strategy. Let's start your next big project.",
-      "primaryBtn": "Start My Project",
-      "secondaryBtn": "Contact Us"
+      "primaryBtn": "Start a Project",
+      "secondaryBtn": "Let's Discuss Your Project"
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Drop us a message and we'll reply as soon as possible.",
+      "getInTouch": "Get In",
+      "getInTouchHighlight": "Touch",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "businessHours": "Business Hours",
+      "businessHoursValue": "Mon - Sun: 9:00 AM – 11:00 PM",
+      "socialMedia": "Social Media",
+      "phone": "Phone",
+      "phoneLabel": "Phone Number *",
+      "sending": "Sending...",
       "form": {
         "name": "Full Name",
         "email": "Email Address",
@@ -331,12 +375,16 @@
       "content3": "At WEBORA, we combine creativity, strategic thinking, and technical expertise to deliver solutions tailored to the unique needs of each client.",
       "content4": "Our team supports businesses throughout their digital journey, from initial project analysis to design, development, launch, and continuous optimization.",
       "content5": "Through a commitment to quality, innovation, and results, WEBORA provides reliable and modern digital solutions that help businesses succeed in a digital world.",
-      "teamTitle": "Our Founding Team",
-      "teamSubtitle": "Meet the founders of WEBORA."
+      "teamTitle": "Our Team",
+      "teamSubtitle": "Passionate professionals at your service.",
+      "teamDescription": "Our team is composed of experienced developers, designers, and digital strategists dedicated to building high-quality digital solutions for our clients."
     },
     "footer": {
-      "description": "Digital agency guiding ambitious companies through their technological and strategic transformation.",
+      "description": "We help businesses grow their digital presence.",
       "quickLinks": "Quick Links",
+      "legal": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
       "contactInfo": "Contact Information",
       "rights": "All rights reserved."
     }

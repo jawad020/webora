@@ -5,6 +5,7 @@ import ValueProposition from '../components/ValueProposition'
 import CustomerReviews from '../components/CustomerReviews'
 import FinalCTA from '../components/FinalCTA'
 import Footer from '../components/Footer'
+import TrustStats from '../components/TrustStats'
 
 const Home = () => {
   return (
@@ -12,19 +13,22 @@ const Home = () => {
       {/* 1. Hero Section */}
       <Hero />
       
-      {/* 2. Short Services Overview */}
+      {/* 2. Trust Stats */}
+      <TrustStats />
+      
+      {/* 3. Short Services Overview */}
       <ServicesOverview />
       
-      {/* 3. Why Choose WEBORA */}
+      {/* 4. Why Choose WEBORA */}
       <ValueProposition />
       
-      {/* 4. Customer Reviews */}
+      {/* 5. Customer Reviews */}
       <CustomerReviews />
       
-      {/* 5. Final Call-To-Action */}
+      {/* 6. Final Call-To-Action */}
       <FinalCTA />
       
-      {/* 6. Footer */}
+      {/* 7. Footer */}
       <Footer />
     </div>
   )

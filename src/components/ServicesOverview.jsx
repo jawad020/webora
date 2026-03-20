@@ -16,12 +16,12 @@ export default function ServicesOverview() {
 
   return (
     <section
-      className="py-24 px-4 md:px-8 border-t border-white/5"
+      className="py-20 md:py-28 px-4 md:px-8 border-t border-white/5"
       style={{ background: "#0A0F1C" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-14 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
                            bg-[#FF4FA3]/10 text-[#FF2D8D] text-sm font-medium mb-4">
             WEBORA Agency
@@ -29,13 +29,13 @@ export default function ServicesOverview() {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             {t("servicesOverview.title")}
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             {t("servicesOverview.subtitle")}
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {previewServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -43,19 +43,19 @@ export default function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative rounded-2xl p-8 border border-white/8 bg-[#111827]/60 backdrop-blur-sm
+              className="group relative rounded-2xl p-7 md:p-8 border border-white/8 bg-[#111827]/60 backdrop-blur-sm
                          hover:border-[#FF4FA3]/40 hover:bg-[#111827]
-                         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,79,163,0.1)]
+                         hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(255,79,163,0.1)]
                          transition-all duration-300 cursor-default flex flex-col h-full"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-[#FF4FA3]/10 flex items-center justify-center mb-6
-                              group-hover:bg-[#FF4FA3]/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-[#FF4FA3]/10 flex items-center justify-center mb-5
+                              group-hover:bg-[#FF4FA3]/20 group-hover:scale-110 transition-all duration-300">
                 <span className="text-2xl">{service.icon}</span>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3">
                 {t(`services.items.${service.id}.title`)}
               </h3>
 
@@ -79,10 +79,10 @@ export default function ServicesOverview() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-[#FF4FA3] to-[#FF2D8D] text-white
-                         font-semibold px-8 py-3.5 rounded-full
+                         font-semibold px-8 py-4 rounded-full
                          shadow-[0_0_24px_rgba(255,79,163,0.35)]
-                         hover:shadow-[0_0_36px_rgba(255,79,163,0.55)]
-                         transition-all duration-200 text-base"
+                         hover:shadow-[0_0_40px_rgba(255,79,163,0.55)]
+                         transition-all duration-200 text-base min-h-[52px]"
             >
               {t("servicesOverview.viewAll")} →
             </motion.button>
