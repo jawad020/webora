@@ -1,5 +1,5 @@
 import React from "react";
-import OurServices from "../components/OurServices";
+import ServicesCatalogue from "../components/ServicesCatalogue";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/ui/Breadcrumb";
@@ -15,7 +15,7 @@ const Services = () => {
     <div className="bg-[#0A0F1C] min-h-screen">
       <Breadcrumb path={breadcrumbPath} heading={t("services.title")} />
 
-      <OurServices />
+      <ServicesCatalogue />
 
       <FinalCTA />
 

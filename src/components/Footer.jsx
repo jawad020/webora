@@ -6,7 +6,7 @@ import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 
 const socialIcons = [
-  { icon: FaWhatsapp, link: "https://wa.me/33755769741" },
+  { icon: FaWhatsapp, link: "https://wa.me/33753043532" },
   {
     icon: FaInstagram,
     link: "https://www.instagram.com/contact.webora",
@@ -105,8 +105,8 @@ export default function Footer() {
             </div>
             <div className="flex flex-col">
               <span className="text-white/40 uppercase text-xs mb-1">WhatsApp</span>
-              <a href="https://wa.me/33755769741" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF2D8D] transition-colors duration-200">
-                +33 7 55 76 97 41
+              <a href="https://wa.me/33753043532" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF2D8D] transition-colors duration-200">
+                +33 7 53 04 35 32
               </a>
             </div>
           </div>

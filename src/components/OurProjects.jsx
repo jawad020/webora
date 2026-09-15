@@ -51,27 +51,36 @@ export default function OurProjects() {
               className="project-card group"
             >
               {/* Image Container */}
-              <div className="project-card__image-wrapper">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-card__image"
-                  loading="lazy"
-                />
-                {/* Gradient overlay */}
-                <div className="project-card__overlay flex flex-col items-center justify-center bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100">
-                  <span className="text-white font-semibold text-lg opacity-0 translate-y-4 transition-all duration-400 group-hover:opacity-100 group-hover:translate-y-0 mt-8">
-                    {language === 'fr' ? 'Voir le projet →' : 'View Project →'}
-                  </span>
-                </div>
+              <div className="project-card__image-wrapper relative">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                  aria-label={project.title}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-card__image"
+                    loading="lazy"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="project-card__overlay flex flex-col items-center justify-center bg-black/50 transition-all duration-300 opacity-0 group-hover:opacity-100">
+                    <span className="text-white font-semibold text-lg opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 mt-8">
+                      {language === 'fr' ? 'Voir le projet →' : 'View Project →'}
+                    </span>
+                  </div>
+                </a>
 
-                {/* Visit Website floating button - appears on hover */}
+                {/* Visit Website floating button */}
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-card__visit-btn"
                   title={language === 'fr' ? 'Visiter le site' : 'Visit Website'}
+                  aria-label={language === 'fr' ? 'Visiter le site' : 'Visit Website'}
                 >
                   <HiExternalLink size={20} />
                 </a>
@@ -90,12 +99,20 @@ export default function OurProjects() {
 
                 {/* Title + Link */}
                 <div className="project-card__title-row">
-                  <h3 className="project-card__title">{project.title}</h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FF4FA3] transition-colors"
+                  >
+                    <h3 className="project-card__title">{project.title}</h3>
+                  </a>
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0"
+                    aria-label={`Open ${project.title}`}
                   >
                     <motion.button
                       whileHover={{ rotate: 45, scale: 1.15 }}

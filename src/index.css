@@ -2,17 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global overflow fix for mobile */
-html, body {
+/* Global overflow and smooth scrolling fix for mobile & desktop */
+html {
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  background-color: #0A0F1C;
 }
 
 #root {
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
+  min-height: 100vh;
 }
 
 

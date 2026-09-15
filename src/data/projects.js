@@ -2,6 +2,7 @@ import kokokidsImg from "../assets/kokokids-preview.png";
 import amglegisinnImg from "../assets/amglegisinn-preview.png";
 import ladiesclosetImg from "../assets/ladiescloset-preview.png";
 import saviVisaImg from "../assets/savivisa-preview.png";
+import sbgTravauxImg from "../assets/sbgtravaux-preview.png";
 
 const projects = [
   {
@@ -39,6 +40,15 @@ const projects = [
     tags: ["Consultancy", "International", "Multi-location"],
     image: saviVisaImg,
     link: "https://www.savisaconsultant.com/",
+  },
+  {
+    id: 5,
+    title: "SBG Travaux",
+    description:
+      "A professional website for an interior and exterior renovation company in Lyon, featuring clear service presentations and online quote requests.",
+    tags: ["Rénovation", "Site Vitrine", "Responsive"],
+    image: sbgTravauxImg,
+    link: "https://www.sbgtravaux.com",
   },
 ];
 

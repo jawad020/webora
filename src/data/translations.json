@@ -105,6 +105,9 @@
       },
       "4": {
         "description": "Un site de consultation spécialisé dans les services de visa internationaux, avec des bureaux en Égypte et à Oman."
+      },
+      "5": {
+        "description": "Un site web professionnel pour une entreprise de rénovation générale à Lyon, conçu pour présenter clairement les prestations avec demande de devis en ligne."
       }
     },
     "valueProp": {
@@ -300,6 +303,9 @@
       },
       "4": {
         "description": "A consultancy website for international visa services with offices in Egypt and Oman."
+      },
+      "5": {
+        "description": "A professional website for a general renovation company in Lyon, designed to showcase services with online quote requests."
       }
     },
     "valueProp": {
