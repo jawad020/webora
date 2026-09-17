@@ -40,8 +40,10 @@ export default function ServicesCatalogue() {
                 {/* Category Header - Clickable */}
                 <button
                   onClick={() => toggleCategory(category.id)}
+                  aria-expanded={isOpen}
                   className={`w-full flex items-center gap-4 md:gap-6 p-5 md:p-7
-                             rounded-2xl border transition-all duration-300 text-left
+                             rounded-2xl border transition-all duration-300 text-left cursor-pointer
+                             focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3]
                              ${isOpen
                                ? 'bg-[#111827] border-[#FF4FA3]/40 shadow-[0_8px_30px_rgba(255,79,163,0.08)] rounded-b-none'
                                : 'bg-[#111827]/60 border-white/8 hover:border-[#FF4FA3]/20 hover:bg-[#111827]/80'

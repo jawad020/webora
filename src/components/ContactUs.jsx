@@ -62,8 +62,8 @@ export default function ContactUs() {
 
   return (
     <section className="py-20 md:py-28 px-4 md:px-8 bg-[#0A0F1C] relative">
-      {/* Background elements */}
-      <div className="absolute top-[20%] right-0 w-[600px] h-[600px] bg-[#FF4FA3]/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* Background elements - desktop only to prevent mobile scroll lag */}
+      <div className="hidden md:block absolute top-[20%] right-0 w-[600px] h-[600px] bg-[#FF4FA3]/5 rounded-full blur-[100px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}

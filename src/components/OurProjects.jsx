@@ -41,14 +41,18 @@ export default function OurProjects() {
             },
           }}
         >
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={{
-                hidden: { opacity: 0, y: 40 },
+                hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0 },
               }}
-              className="project-card group"
+              className={`project-card group ${
+                index === projects.length - 1 && projects.length % 2 !== 0
+                  ? "md:col-span-2 md:max-w-xl md:mx-auto md:w-full"
+                  : ""
+              }`}
             >
               {/* Image Container */}
               <div className="project-card__image-wrapper relative">

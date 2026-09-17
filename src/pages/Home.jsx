@@ -1,12 +1,12 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Statistics from '../components/Statistics'
 import ServicesOverview from '../components/ServicesOverview'
+import FeaturedProjects from '../components/FeaturedProjects'
 import ValueProposition from '../components/ValueProposition'
 import CustomerReviews from '../components/CustomerReviews'
 import FinalCTA from '../components/FinalCTA'
 import Footer from '../components/Footer'
-import TrustStats from '../components/TrustStats'
-import Statistics from '../components/Statistics'
 
 const Home = () => {
   return (
@@ -19,17 +19,20 @@ const Home = () => {
       
       {/* 3. Short Services Overview */}
       <ServicesOverview />
+
+      {/* 4. Selected Projects Preview */}
+      <FeaturedProjects />
       
-      {/* 4. Why Choose WEBORA */}
+      {/* 5. Why Choose WEBORA */}
       <ValueProposition />
       
-      {/* 5. Customer Reviews */}
+      {/* 6. Customer Reviews */}
       <CustomerReviews />
       
-      {/* 6. Final Call-To-Action */}
+      {/* 7. Final Call-To-Action */}
       <FinalCTA />
       
-      {/* 7. Footer */}
+      {/* 8. Footer */}
       <Footer />
     </div>
   )

@@ -27,6 +27,17 @@ body {
   min-height: 100vh;
 }
 
+/* Prevent long words or French phrases from breaking mobile layouts */
+h1, h2, h3, h4, h5, h6, p, span, a, button, label {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Native-app smooth tap response without grey flicker */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 
 
 :root {

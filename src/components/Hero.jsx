@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <div style={{ background: "#0A0F1C" }} className="overflow-hidden">
       <section className="relative overflow-hidden" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
-        {/* Gradient glow blobs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FF4FA3] opacity-10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-[#FF2D8D] opacity-8 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-1/2 right-0 w-60 h-60 bg-[#FF4FA3] opacity-5 rounded-full blur-[80px] pointer-events-none" />
+        {/* Gradient glow blobs - GPU optimized for mobile smoothness */}
+        <div className="hidden md:block absolute top-0 left-1/4 w-96 h-96 bg-[#FF4FA3]/10 rounded-full blur-[90px] pointer-events-none" />
+        <div className="hidden md:block absolute bottom-0 right-1/4 w-72 h-72 bg-[#FF2D8D]/8 rounded-full blur-[70px] pointer-events-none" />
+        <div className="md:hidden absolute top-10 left-1/2 -translate-x-1/2 w-48 h-48 bg-[#FF4FA3]/5 rounded-full blur-xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
           {/* ── Badge ── */}
