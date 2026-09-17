@@ -117,41 +117,49 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               {t("about.teamTitle")}
             </h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
               {t("about.teamSubtitle")}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl p-8 md:p-12 border border-white/8 bg-[#111827]/60 backdrop-blur-sm text-center mb-10 max-w-3xl mx-auto"
+          >
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              {t("about.teamDescription")}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Jawad Ahmad",
-                role: { fr: "Fondateur & CTO", en: "Founder & CTO" },
-                initials: "JA",
+                icon: "💻",
+                role: { fr: "Pôle Technique & Développement", en: "Technical & Development Division" },
                 desc: {
-                  fr: "Expertise technique et développement web.",
-                  en: "Technical expertise and web development."
+                  fr: "Conception d'architectures modernes, développement sur mesure et performance web.",
+                  en: "Modern architecture design, custom development, and web performance."
                 }
               },
               {
-                name: "Amira",
-                role: { fr: "Fondatrice & Responsable Marketing", en: "Founder & Marketing Manager" },
-                initials: "AM",
+                icon: "🎨",
+                role: { fr: "Pôle Design & Image de Marque", en: "Design & Brand Identity Division" },
                 desc: {
-                  fr: "Stratégie marketing et communication digitale.",
-                  en: "Marketing strategy and digital communication."
+                  fr: "Création d'identités visuelles percutantes, design UX/UI et cohérence graphique.",
+                  en: "High-impact visual identities, UX/UI design, and graphic consistency."
                 }
               },
               {
-                name: "Mohammed",
-                role: { fr: "Fondateur & CEO", en: "Founder & CEO" },
-                initials: "MO",
+                icon: "📈",
+                role: { fr: "Pôle Stratégie & Marketing Digital", en: "Strategy & Digital Marketing Division" },
                 desc: {
-                  fr: "Vision stratégique et développement commercial.",
-                  en: "Strategic vision and business development."
+                  fr: "Visibilité, optimisation du référencement (SEO) et stratégies de conversion pérennes.",
+                  en: "Visibility, search engine optimization (SEO), and sustainable conversion strategies."
                 }
               }
-            ].map((member, index) => (
+            ].map((pole, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -161,16 +169,15 @@ const About = () => {
                 className="rounded-2xl p-8 border border-white/8 bg-[#111827]/60 backdrop-blur-sm
                            hover:border-[#FF4FA3]/30 hover:-translate-y-1 transition-all duration-300 text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#FF4FA3] to-[#FF2D8D]
-                                flex items-center justify-center text-white text-lg font-bold mx-auto mb-4">
-                  {member.initials}
+                <div className="w-14 h-14 rounded-2xl bg-[#FF4FA3]/10 border border-[#FF4FA3]/20
+                                flex items-center justify-center text-2xl mx-auto mb-4">
+                  {pole.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-[#FF4FA3] text-sm font-medium mb-3">
-                  {t("nav.home") === "Accueil" ? member.role.fr : member.role.en}
-                </p>
+                <h3 className="text-lg font-bold text-white mb-2">
+                  {t("nav.home") === "Accueil" ? pole.role.fr : pole.role.en}
+                </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  {t("nav.home") === "Accueil" ? member.desc.fr : member.desc.en}
+                  {t("nav.home") === "Accueil" ? pole.desc.fr : pole.desc.en}
                 </p>
               </motion.div>
             ))}
