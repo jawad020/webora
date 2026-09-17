@@ -29,11 +29,12 @@ export default function ContactUs() {
       const email = formData.get("email") || "";
       const phone = formData.get("mobile") || "";
       const company = formData.get("company") || "";
+      const subjectField = formData.get("subject") || "";
       const message = formData.get("message") || "";
 
-      const subject = encodeURIComponent(`Nouveau contact client - ${name}`);
+      const subject = encodeURIComponent(subjectField || `Nouveau contact client - ${name}`);
       const body = encodeURIComponent(
-        `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nEntreprise: ${company}\n\nMessage:\n${message}`
+        `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nEntreprise: ${company}\nSujet: ${subjectField}\n\nMessage:\n${message}`
       );
       window.location.href = `mailto:contact.weboraa@gmail.com?subject=${subject}&body=${body}`;
       setStatus("success");
@@ -256,6 +257,20 @@ export default function ContactUs() {
                                transition-all duration-300 placeholder-gray-600"
                   />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm text-gray-400 pl-1 font-medium">
+                  {language === 'fr' ? 'Sujet' : 'Subject'} *
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  className="w-full bg-[#0A0F1C]/80 border border-white/10 text-white px-5 py-4 rounded-xl
+                             focus:outline-none focus:border-[#FF4FA3]/50 focus:shadow-[0_0_0_3px_rgba(255,79,163,0.1)]
+                             transition-all duration-300 placeholder-gray-600"
+                />
               </div>
 
               <div className="space-y-2">

@@ -95,19 +95,19 @@
     },
     "projectsList": {
       "1": {
-        "description": "Un site e-commerce pour vêtements pour enfants, offrant une navigation intuitive et une expérience d'achat fluide et responsive."
+        "description": "Un site e-commerce dédié aux vêtements pour enfants, offrant une navigation intuitive et une expérience d'achat responsive."
       },
       "2": {
-        "description": "Un site de conseil professionnel conçu pour présenter clairement les services avec un design moderne et entièrement responsive."
+        "description": "Un site professionnel de conseil présentant clairement les services proposés avec une conception moderne et responsive."
       },
       "3": {
-        "description": "Une boutique en ligne dédiée à la mode féminine au Pakistan, avec une navigation simple, une compatibilité mobile et un design moderne."
+        "description": "Une boutique en ligne dédiée aux vêtements féminins au Pakistan, avec une navigation produit intuitive, une expérience mobile optimisée et une interface moderne."
       },
       "4": {
-        "description": "Un site de consultation spécialisé dans les services de visa internationaux, avec des bureaux en Égypte et à Oman."
+        "description": "Un site professionnel de conseil en visa international présentant les services de l'agence et ses bureaux en Égypte et à Oman."
       },
       "5": {
-        "description": "Un site web professionnel pour une entreprise de rénovation générale à Lyon, conçu pour présenter clairement les prestations avec demande de devis en ligne."
+        "description": "Un site professionnel présentant les activités et services de SBG Travaux avec une expérience claire, moderne et responsive."
       }
     },
     "valueProp": {
@@ -293,19 +293,19 @@
     },
     "projectsList": {
       "1": {
-        "description": "An e-commerce website for kids' clothing featuring intuitive browsing and a responsive shopping experience."
+        "description": "An e-commerce website for children's clothing with intuitive browsing and a responsive shopping experience."
       },
       "2": {
-        "description": "A professional consultancy website featuring service showcases and responsive design."
+        "description": "A professional consultancy website clearly showcasing services with a modern and responsive design."
       },
       "3": {
-        "description": "A Pakistan-focused online store for ladies' dresses with user-friendly product browsing, mobile responsiveness, and a modern layout."
+        "description": "An online store for women's clothing in Pakistan, with intuitive product browsing, optimized mobile experience and a modern interface."
       },
       "4": {
-        "description": "A consultancy website for international visa services with offices in Egypt and Oman."
+        "description": "A professional international visa consultancy website presenting the agency's services and offices in Egypt and Oman."
       },
       "5": {
-        "description": "A professional website for a general renovation company in Lyon, designed to showcase services with online quote requests."
+        "description": "A professional website presenting SBG Travaux's activities and services with a clear, modern and responsive experience."
       }
     },
     "valueProp": {

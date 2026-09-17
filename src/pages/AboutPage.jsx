@@ -101,12 +101,12 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-16 md:py-24 px-4 md:px-8 border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center mb-12"
           >
             <span
               className="inline-block px-4 py-1.5 rounded-full border border-[#FF4FA3]/30
@@ -117,22 +117,64 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               {t("about.teamTitle")}
             </h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-10">
+            <p className="text-gray-400 text-lg max-w-xl mx-auto">
               {t("about.teamSubtitle")}
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="rounded-2xl p-10 md:p-14 border border-white/8 bg-[#111827]/60 backdrop-blur-sm text-center"
-          >
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              {t("about.teamDescription")}
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Jawad Ahmad",
+                role: { fr: "Fondateur & CTO", en: "Founder & CTO" },
+                initials: "JA",
+                desc: {
+                  fr: "Expertise technique et développement web.",
+                  en: "Technical expertise and web development."
+                }
+              },
+              {
+                name: "Amira",
+                role: { fr: "Fondatrice & Responsable Marketing", en: "Founder & Marketing Manager" },
+                initials: "AM",
+                desc: {
+                  fr: "Stratégie marketing et communication digitale.",
+                  en: "Marketing strategy and digital communication."
+                }
+              },
+              {
+                name: "Mohammed",
+                role: { fr: "Fondateur & CEO", en: "Founder & CEO" },
+                initials: "MO",
+                desc: {
+                  fr: "Vision stratégique et développement commercial.",
+                  en: "Strategic vision and business development."
+                }
+              }
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="rounded-2xl p-8 border border-white/8 bg-[#111827]/60 backdrop-blur-sm
+                           hover:border-[#FF4FA3]/30 hover:-translate-y-1 transition-all duration-300 text-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#FF4FA3] to-[#FF2D8D]
+                                flex items-center justify-center text-white text-lg font-bold mx-auto mb-4">
+                  {member.initials}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                <p className="text-[#FF4FA3] text-sm font-medium mb-3">
+                  {t("nav.home") === "Accueil" ? member.role.fr : member.role.en}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {t("nav.home") === "Accueil" ? member.desc.fr : member.desc.en}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
